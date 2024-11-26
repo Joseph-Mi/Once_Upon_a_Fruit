@@ -1,0 +1,63 @@
+//this module keeps track of the player's lives
+//player starts off with 3 lives
+//if the fruit touches the bottom of the screen, the player loses a life
+
+/////////////////////////////
+// RESETn should be escape key for future references
+/////////////////////////////
+
+//need a module to check if fruit touched the ground
+module touchTheGround (
+    input [6:0] Y_fruit, // Y-coordinate of the fruit
+    output reg touched // Output signal indicating if the fruit touched the ground
+);
+    wire bottomOfFruit = Y_fruit - 8; // Y-coordinate of the bottom of the fruit
+
+
+    // Check if the fruit touched the ground
+    always @* begin
+        if (bottomOfFruit == 0) begin
+            touched = 1; // Fruit touched the ground
+        end else begin
+            touched = 0; // Fruit did not touch the ground
+        end
+    end
+endmodule
+
+//need a module to keep track of the player's lives
+module numOfLives (
+    input Clock, // System clock
+    input Resetn, // Active-low reset
+    input touched, // Signal indicating if the fruit touched the ground
+    output reg [1:0] lives // Number of lives remaining
+);
+    parameter MAX_LIVES = 3; // Maximum number of lives
+
+    // Initialize the number of lives at reset
+    always @(posedge Clock or negedge Resetn) begin
+        if (!Resetn) begin
+            lives <= MAX_LIVES; // Initialize the number of lives
+        end else begin
+            // Decrement the number of lives if the fruit touched the ground
+            if (touched && lives > 0) begin
+                lives <= lives - 1; // Decrement the number of lives
+            end
+        end
+    end
+endmodule
+
+module displayLives (
+    input [1:0] lives,         // Number of lives remaining (2 bits for 0-3 lives)
+    output reg [6:0] display   // 7-segment display output for lives
+);
+
+    always @(*) begin
+        case (lives)
+            2'b00: display = 7'b1000000; // "0" on 7-segment
+            2'b01: display = 7'b1111001; // "1" on 7-segment
+            2'b10: display = 7'b0100100; // "2" on 7-segment
+            2'b11: display = 7'b0110000; // "3" on 7-segment
+            default: display = 7'b1111111; // Blank display (or all segments off)
+        endcase
+    end
+endmodule

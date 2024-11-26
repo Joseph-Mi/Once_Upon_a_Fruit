@@ -1,0 +1,105 @@
+module collistiondetect(
+    input [7:0] X_fruit,
+    input [6:0] Y_fruit,
+    input [7:0] X_basket,
+    input [6:0] Y_basket,
+    output reg collision
+);
+    // Center coordinates of the fruit (adjusting from top-left corner)
+    wire [7:0] X_fruit_center = X_fruit + 4;     // Center X (fruit is 8x8)
+    wire [6:0] Y_fruit_center = Y_fruit + 4;     // Center Y
+
+    // Basket dimensions: 15x11 (adjust bounds to include center alignment)
+    always @* begin
+        if ((X_fruit_center >= X_basket) && (X_fruit_center <= X_basket + 15) &&
+            (Y_fruit_center >= Y_basket) && (Y_fruit_center <= Y_basket + 11)) begin
+            collision = 1'b1;
+        end else begin
+            collision = 1'b0;
+        end
+    end
+endmodule
+
+
+module pointsystem(
+    input Clock,
+    input Resetn,
+    input collision,
+    output reg [6:0] score // 7-bit score to hold values up to 100
+);
+
+    always @(posedge Clock or negedge Resetn) begin
+        if (!Resetn) begin
+            score <= 7'd0; // Reset score to 0
+        end else if (collision && score < 7'd100) begin
+            score <= score + 1; // Increment score only if it's less than 100
+        end
+    end
+endmodule
+
+
+module scoreDisplay(
+    input [6:0] score,          // 7-bit score input
+    output reg [6:0] display_tens, // Tens digit for 7-segment display
+    output reg [6:0] display_units // Units digit for 7-segment display
+);
+    reg [11:0] bcd;  // BCD register to hold tens and units (12 bits for shifting)
+    reg [3:0] tens;  // Tens place (4 bits)
+    reg [3:0] units; // Units place (4 bits)
+    integer i;       // Loop index for shifting
+
+    always @* begin
+        // Initialize the BCD shift register
+        bcd = {5'b00000, score}; // Append 5 leading zeroes to the 7-bit score
+
+        // Perform the shift-and-add-3 algorithm for BCD conversion
+        for (i = 0; i < 7; i = i + 1) begin
+            // Check each digit (tens and units) for a value >= 5 and add 3
+            if (bcd[11:8] >= 5)
+                bcd[11:8] = bcd[11:8] + 3; // Add 3 to the tens place
+            if (bcd[7:4] >= 5)
+                bcd[7:4] = bcd[7:4] + 3; // Add 3 to the units place
+
+            // Shift left by one bit
+            bcd = bcd << 1;
+        end
+
+        // Extract tens and units digits from the BCD register
+        tens = bcd[11:8];
+        units = bcd[7:4];
+    end
+
+    // Encoding tens digit for 7-segment display
+    always @* begin
+        case (tens)
+            4'd0: display_tens = 7'b1000000;
+            4'd1: display_tens = 7'b1111001;
+            4'd2: display_tens = 7'b0100100;
+            4'd3: display_tens = 7'b0110000;
+            4'd4: display_tens = 7'b0011001;
+            4'd5: display_tens = 7'b0010010;
+            4'd6: display_tens = 7'b0000010;
+            4'd7: display_tens = 7'b1111000;
+            4'd8: display_tens = 7'b0000000;
+            4'd9: display_tens = 7'b0010000;
+            default: display_tens = 7'b1111111; // Default (blank)
+        endcase
+    end
+
+    // Encoding units digit for 7-segment display
+    always @* begin
+        case (units)
+            4'd0: display_units = 7'b1000000;
+            4'd1: display_units = 7'b1111001;
+            4'd2: display_units = 7'b0100100;
+            4'd3: display_units = 7'b0110000;
+            4'd4: display_units = 7'b0011001;
+            4'd5: display_units = 7'b0010010;
+            4'd6: display_units = 7'b0000010;
+            4'd7: display_units = 7'b1111000;
+            4'd8: display_units = 7'b0000000;
+            4'd9: display_units = 7'b0010000;
+            default: display_units = 7'b1111111; // Default (blank)
+        endcase
+    end
+endmodule

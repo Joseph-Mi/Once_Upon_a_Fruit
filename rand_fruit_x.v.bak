@@ -1,0 +1,63 @@
+module rand_fruit_x (
+    input CLOCK_50,               // 50 MHz clock
+    input [0:0] KEY,              // Reset signal
+    output reg [7:0] rnd,         // Random number output (range 10-150)
+    output inSignal_posedge       // Signal high on every 3rd inSignal positive edge
+);
+
+/*****************************************************************************
+ *                 Internal Wires and Registers Declarations                 *
+ *****************************************************************************/
+// Wire to connect SpeedUpCounter to the internal logic
+wire inSignal;
+
+// Linear Feedback Shift Register (LFSR) for pseudo-random number generation
+reg [7:0] lfsr;               // 8-bit LFSR
+wire feedback = lfsr[7] ^ lfsr[5] ^ lfsr[4] ^ lfsr[3]; // XOR taps
+
+// Counter to generate number every 3 clock edges of inSignal
+reg [1:0] count;
+
+// Register to detect positive edges of inSignal
+reg inSignal_d; // Delayed version of inSignal
+assign inSignal_posedge = ~inSignal_d & inSignal; // Positive edge detection
+
+always @(posedge CLOCK_50 or negedge KEY[0]) begin
+    if (!KEY[0]) begin
+        lfsr <= 8'hA5;        // Reset LFSR to a non-zero seed
+        rnd <= 8'd0;          // Set random number to 0
+        count <= 2'b0;        // Reset counter
+        inSignal_d <= 1'b0;   // Reset delayed signal
+    end
+    else begin
+        // Update the delayed signal to detect edges
+        inSignal_d <= inSignal;
+
+        // Check for positive edge of `inSignal`
+        if (inSignal_posedge) begin
+            // Increment counter on each positive edge of `inSignal`
+            if (count == 2'b10) begin
+                count <= 2'b0;    // Reset counter after 3 positive edges
+                lfsr <= {lfsr[6:0], feedback}; // Update LFSR
+
+                // Scale LFSR output to range [10, 150]
+                rnd <= (lfsr % 141) + 10;  // Modulo operation ensures range [0, 140], then add 10
+            end
+            else begin
+                count <= count + 1'b1; // Increment counter
+            end
+        end
+    end
+end
+
+/*****************************************************************************
+ *                              Internal Modules                             *
+ *****************************************************************************/
+ 
+// SpeedUpCounter instantiation
+SpeedUpCounter speedUpCounter (
+    .C50(CLOCK_50),   // 50 MHz clock
+    .outSignal(inSignal) // Output signal to rand_fruit_x
+);
+
+endmodule
