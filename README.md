@@ -9,7 +9,7 @@ Joseph:
 - global management
 
 
-Jessie 
+Jessie:
 
 - designed game visuals
 - designed score, lives, a end logic
