@@ -1,5 +1,5 @@
 Timing Analyzer report for fruit_game
-Tue Nov 26 03:18:11 2024
+Tue Nov 26 13:57:38 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -102,26 +102,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 2.33        ;
+; Average used               ; 2.95        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  10.1%      ;
-;     Processor 3            ;   9.4%      ;
-;     Processor 4            ;   9.4%      ;
-;     Processor 5            ;   8.7%      ;
-;     Processor 6            ;   8.7%      ;
-;     Processor 7            ;   8.7%      ;
-;     Processor 8            ;   8.7%      ;
-;     Processor 9            ;   8.6%      ;
-;     Processor 10           ;   8.6%      ;
-;     Processor 11           ;   8.6%      ;
-;     Processor 12           ;   8.6%      ;
-;     Processor 13           ;   8.6%      ;
-;     Processor 14           ;   8.6%      ;
-;     Processor 15           ;   8.6%      ;
-;     Processor 16           ;   8.6%      ;
+;     Processor 2            ;  14.6%      ;
+;     Processor 3            ;  14.2%      ;
+;     Processor 4            ;  13.6%      ;
+;     Processor 5            ;  12.9%      ;
+;     Processor 6            ;  12.9%      ;
+;     Processor 7            ;  12.8%      ;
+;     Processor 8            ;  12.8%      ;
+;     Processor 9            ;  12.8%      ;
+;     Processor 10           ;  12.8%      ;
+;     Processor 11           ;  12.8%      ;
+;     Processor 12           ;  12.7%      ;
+;     Processor 13           ;  12.6%      ;
+;     Processor 14           ;  12.6%      ;
+;     Processor 15           ;  12.5%      ;
+;     Processor 16           ;  12.5%      ;
 +----------------------------+-------------+
 
 
@@ -146,10 +146,10 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                       ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
-; 18.17 MHz  ; 18.17 MHz       ; CLOCK_50                                                                         ;      ;
-; 187.69 MHz ; 187.69 MHz      ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 296.21 MHz ; 296.21 MHz      ; fall_timer_1[0]                                                                  ;      ;
-; 302.21 MHz ; 302.21 MHz      ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                          ;      ;
+; 17.87 MHz  ; 17.87 MHz       ; CLOCK_50                                                                         ;      ;
+; 132.84 MHz ; 132.84 MHz      ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 280.58 MHz ; 280.58 MHz      ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                          ;      ;
+; 282.01 MHz ; 282.01 MHz      ; fall_timer_1[0]                                                                  ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -165,12 +165,12 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                     ; Slack   ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                                  ; -35.042 ; -2435.490     ;
-; fall_timer_1[0]                                                                           ; -8.987  ; -96.072       ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -8.804  ; -31.648       ;
-; KEY[0]                                                                                    ; -5.456  ; -74.937       ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -3.383  ; -184.786      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 34.672  ; 0.000         ;
+; CLOCK_50                                                                                  ; -35.953 ; -2605.810     ;
+; fall_timer_1[0]                                                                           ; -8.379  ; -90.924       ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -8.279  ; -30.309       ;
+; KEY[0]                                                                                    ; -5.741  ; -77.529       ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -3.857  ; -192.873      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 32.472  ; 0.000         ;
 +-------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -179,12 +179,12 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -4.054 ; -12.098       ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.328  ; 0.000         ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.379  ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 0.891  ; 0.000         ;
-; KEY[0]                                                                                    ; 1.161  ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 4.687  ; 0.000         ;
+; CLOCK_50                                                                                  ; -4.318 ; -8.329        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.380  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.439  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.853  ; 0.000         ;
+; KEY[0]                                                                                    ; 1.322  ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 4.644  ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -193,11 +193,11 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -7.040 ; -245.410      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -6.130 ; -177.647      ;
-; fall_timer_1[0]                                                                           ; -5.147 ; -56.159       ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -4.170 ; -14.102       ;
-; CLOCK_50                                                                                  ; -3.769 ; -1072.026     ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -7.057 ; -214.894      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -6.129 ; -159.286      ;
+; fall_timer_1[0]                                                                           ; -4.447 ; -46.126       ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -3.779 ; -13.481       ;
+; CLOCK_50                                                                                  ; -3.731 ; -1135.444     ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -206,11 +206,11 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                     ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                  ; 0.337 ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 1.510 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 1.516 ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 1.937 ; 0.000         ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 3.980 ; 0.000         ;
+; CLOCK_50                                                                                  ; 0.373 ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.407 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 1.503 ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 2.227 ; 0.000         ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 3.733 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -219,13 +219,13 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -39.043       ;
-; fall_timer_1[0]                                                                           ; -0.394 ; -6.548        ;
-; KEY[0]                                                                                    ; -0.006 ; -0.009        ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.445  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; -0.701 ; -11.035       ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -35.610       ;
+; KEY[0]                                                                                    ; -0.066 ; -0.198        ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.465  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                                  ; 8.827  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 18.777 ; 0.000         ;
+; CLOCK_50                                                                                  ; 8.828  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 18.779 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -240,10 +240,10 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                       ; Note ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
-; 17.91 MHz  ; 17.91 MHz       ; CLOCK_50                                                                         ;      ;
-; 196.7 MHz  ; 196.7 MHz       ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 294.03 MHz ; 294.03 MHz      ; fall_timer_1[0]                                                                  ;      ;
-; 298.95 MHz ; 298.95 MHz      ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                          ;      ;
+; 17.62 MHz  ; 17.62 MHz       ; CLOCK_50                                                                         ;      ;
+; 139.2 MHz  ; 139.2 MHz       ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 284.82 MHz ; 284.82 MHz      ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                          ;      ;
+; 285.14 MHz ; 285.14 MHz      ; fall_timer_1[0]                                                                  ;      ;
 +------------+-----------------+----------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -253,12 +253,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                     ; Slack   ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                                  ; -35.830 ; -2329.504     ;
-; fall_timer_1[0]                                                                           ; -8.961  ; -96.109       ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -8.851  ; -31.847       ;
-; KEY[0]                                                                                    ; -5.640  ; -76.796       ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -3.299  ; -180.774      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 34.916  ; 0.000         ;
+; CLOCK_50                                                                                  ; -36.743 ; -2507.299     ;
+; fall_timer_1[0]                                                                           ; -8.574  ; -92.504       ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -8.368  ; -30.817       ;
+; KEY[0]                                                                                    ; -5.851  ; -79.749       ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -3.749  ; -188.325      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 32.816  ; 0.000         ;
 +-------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -267,12 +267,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -4.111 ; -12.371       ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.314  ; 0.000         ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.388  ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 0.862  ; 0.000         ;
-; KEY[0]                                                                                    ; 1.232  ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 4.738  ; 0.000         ;
+; CLOCK_50                                                                                  ; -4.392 ; -8.829        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.369  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.420  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.870  ; 0.000         ;
+; KEY[0]                                                                                    ; 1.413  ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 4.694  ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -281,11 +281,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -6.981 ; -243.363      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -5.960 ; -172.737      ;
-; fall_timer_1[0]                                                                           ; -5.047 ; -55.156       ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -4.174 ; -14.082       ;
-; CLOCK_50                                                                                  ; -3.540 ; -1008.927     ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -6.994 ; -213.220      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -5.956 ; -154.773      ;
+; fall_timer_1[0]                                                                           ; -4.466 ; -46.425       ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -3.798 ; -13.512       ;
+; CLOCK_50                                                                                  ; -3.508 ; -1067.753     ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -294,11 +294,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                     ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                  ; 0.262 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 1.527 ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 1.576 ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 1.881 ; 0.000         ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 4.043 ; 0.000         ;
+; CLOCK_50                                                                                  ; 0.292 ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.557 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 1.517 ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 2.133 ; 0.000         ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 3.818 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -307,13 +307,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -38.423       ;
-; fall_timer_1[0]                                                                           ; -0.394 ; -6.290        ;
-; KEY[0]                                                                                    ; -0.001 ; -0.001        ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.413  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; -0.657 ; -10.537       ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -0.394 ; -34.815       ;
+; KEY[0]                                                                                    ; -0.037 ; -0.069        ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.438  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                                  ; 8.787  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 18.759 ; 0.000         ;
+; CLOCK_50                                                                                  ; 8.788  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 18.756 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -328,12 +328,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                                     ; Slack   ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                                                  ; -10.751 ; -1356.370     ;
-; fall_timer_1[0]                                                                           ; -4.910  ; -52.679       ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -4.775  ; -16.899       ;
-; KEY[0]                                                                                    ; -2.802  ; -37.764       ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.157  ; -105.690      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 36.153  ; 0.000         ;
+; CLOCK_50                                                                                  ; -11.054 ; -1443.071     ;
+; fall_timer_1[0]                                                                           ; -4.462  ; -48.077       ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -4.441  ; -15.945       ;
+; KEY[0]                                                                                    ; -2.899  ; -37.800       ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.380  ; -109.811      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 34.493  ; 0.000         ;
 +-------------------------------------------------------------------------------------------+---------+---------------+
 
 
@@ -342,12 +342,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -2.142 ; -6.392        ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.139  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.195  ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 0.455  ; 0.000         ;
-; KEY[0]                                                                                    ; 0.681  ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 2.767  ; 0.000         ;
+; CLOCK_50                                                                                  ; -2.263 ; -4.395        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.138  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.247  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.330  ; 0.000         ;
+; KEY[0]                                                                                    ; 0.768  ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 2.815  ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -356,11 +356,11 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -4.210 ; -146.671      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -3.613 ; -104.701      ;
-; fall_timer_1[0]                                                                           ; -3.212 ; -35.085       ;
-; CLOCK_50                                                                                  ; -2.525 ; -646.920      ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -2.185 ; -6.894        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -4.213 ; -128.164      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -3.614 ; -93.913       ;
+; CLOCK_50                                                                                  ; -2.815 ; -685.154      ;
+; fall_timer_1[0]                                                                           ; -2.716 ; -28.080       ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -1.846 ; -6.485        ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -369,11 +369,11 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                     ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                  ; 0.094 ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 0.919 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.932 ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 1.317 ; 0.000         ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 2.133 ; 0.000         ;
+; CLOCK_50                                                                                  ; 0.116 ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.169 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.926 ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 1.532 ; 0.000         ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 1.986 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -382,12 +382,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; KEY[0]                                                                                    ; -0.194 ; -4.956        ;
-; fall_timer_1[0]                                                                           ; -0.047 ; -0.047        ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.047  ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.432  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; -0.455 ; -4.364        ;
+; KEY[0]                                                                                    ; -0.228 ; -3.559        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.083  ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.487  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                                  ; 8.814  ; 0.000         ;
+; CLOCK_50                                                                                  ; 8.820  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 18.891 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
@@ -403,12 +403,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -8.709 ; -1145.263     ;
-; fall_timer_1[0]                                                                           ; -4.569 ; -49.142       ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -4.528 ; -16.141       ;
-; KEY[0]                                                                                    ; -2.625 ; -35.661       ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.088 ; -99.115       ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 36.645 ; 0.000         ;
+; CLOCK_50                                                                                  ; -9.105 ; -1214.598     ;
+; fall_timer_1[0]                                                                           ; -4.265 ; -45.495       ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -4.239 ; -15.351       ;
+; KEY[0]                                                                                    ; -2.730 ; -35.761       ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -2.282 ; -102.967      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 35.213 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -417,12 +417,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; CLOCK_50                                                                                  ; -2.109 ; -6.295        ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.126  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.177  ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 0.408  ; 0.000         ;
-; KEY[0]                                                                                    ; 0.686  ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 2.727  ; 0.000         ;
+; CLOCK_50                                                                                  ; -2.231 ; -4.330        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.125  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.223  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.403  ; 0.000         ;
+; KEY[0]                                                                                    ; 0.752  ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 2.758  ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -431,11 +431,11 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -4.144 ; -144.452      ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -3.509 ; -101.689      ;
-; fall_timer_1[0]                                                                           ; -3.194 ; -34.934       ;
-; CLOCK_50                                                                                  ; -2.256 ; -621.327      ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -2.033 ; -6.556        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -4.144 ; -126.316      ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; -3.510 ; -91.211       ;
+; fall_timer_1[0]                                                                           ; -2.781 ; -28.934       ;
+; CLOCK_50                                                                                  ; -2.489 ; -658.520      ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -1.773 ; -6.241        ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -444,11 +444,11 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                     ; Slack ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
-; CLOCK_50                                                                                  ; 0.039 ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.887 ; 0.000         ;
-; fall_timer_1[0]                                                                           ; 0.977 ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 1.329 ; 0.000         ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 2.107 ; 0.000         ;
+; CLOCK_50                                                                                  ; 0.057 ; 0.000         ;
+; fall_timer_1[0]                                                                           ; 0.314 ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.878 ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 1.504 ; 0.000         ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 1.976 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -457,13 +457,13 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                     ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
-; KEY[0]                                                                                    ; -0.176 ; -4.741        ;
-; fall_timer_1[0]                                                                           ; 0.003  ; 0.000         ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.073  ; 0.000         ;
-; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.450  ; 0.000         ;
+; fall_timer_1[0]                                                                           ; -0.335 ; -2.954        ;
+; KEY[0]                                                                                    ; -0.192 ; -3.205        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 0.102  ; 0.000         ;
+; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0.485  ; 0.000         ;
 ; VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                                  ; 8.810  ; 0.000         ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 18.888 ; 0.000         ;
+; CLOCK_50                                                                                  ; 8.812  ; 0.000         ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 18.889 ; 0.000         ;
 +-------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -473,28 +473,28 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                                          ;
-+--------------------------------------------------------------------------------------------+-----------+---------+-----------+---------+---------------------+
-; Clock                                                                                      ; Setup     ; Hold    ; Recovery  ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------------------------------------------------------+-----------+---------+-----------+---------+---------------------+
-; Worst-case Slack                                                                           ; -35.830   ; -4.111  ; -7.040    ; 0.039   ; -0.394              ;
-;  CLOCK_50                                                                                  ; -35.830   ; -4.111  ; -3.769    ; 0.039   ; 8.787               ;
-;  KEY[0]                                                                                    ; -5.640    ; 0.681   ; N/A       ; N/A     ; -0.194              ;
-;  KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -8.851    ; 2.727   ; -4.174    ; 1.317   ; 0.413               ;
-;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; N/A       ; N/A     ; N/A       ; N/A     ; 1.666               ;
-;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 34.672    ; 0.177   ; -6.130    ; 0.887   ; 18.759              ;
-;  fall_timer_1[0]                                                                           ; -8.987    ; 0.408   ; -5.147    ; 0.919   ; -0.394              ;
-;  music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -3.383    ; 0.126   ; -7.040    ; 2.107   ; -0.394              ;
-; Design-wide TNS                                                                            ; -2822.933 ; -12.371 ; -1565.344 ; 0.0     ; -45.6               ;
-;  CLOCK_50                                                                                  ; -2435.490 ; -12.371 ; -1072.026 ; 0.000   ; 0.000               ;
-;  KEY[0]                                                                                    ; -76.796   ; 0.000   ; N/A       ; N/A     ; -4.956              ;
-;  KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -31.847   ; 0.000   ; -14.102   ; 0.000   ; 0.000               ;
-;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; N/A       ; N/A     ; N/A       ; N/A     ; 0.000               ;
-;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.000     ; 0.000   ; -177.647  ; 0.000   ; 0.000               ;
-;  fall_timer_1[0]                                                                           ; -96.109   ; 0.000   ; -56.159   ; 0.000   ; -6.548              ;
-;  music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -184.786  ; 0.000   ; -245.410  ; 0.000   ; -39.043             ;
-+--------------------------------------------------------------------------------------------+-----------+---------+-----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                                         ;
++--------------------------------------------------------------------------------------------+-----------+--------+-----------+---------+---------------------+
+; Clock                                                                                      ; Setup     ; Hold   ; Recovery  ; Removal ; Minimum Pulse Width ;
++--------------------------------------------------------------------------------------------+-----------+--------+-----------+---------+---------------------+
+; Worst-case Slack                                                                           ; -36.743   ; -4.392 ; -7.057    ; 0.057   ; -0.701              ;
+;  CLOCK_50                                                                                  ; -36.743   ; -4.392 ; -3.731    ; 0.057   ; 8.788               ;
+;  KEY[0]                                                                                    ; -5.851    ; 0.752  ; N/A       ; N/A     ; -0.228              ;
+;  KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -8.368    ; 2.758  ; -3.798    ; 1.504   ; 0.438               ;
+;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; N/A       ; N/A    ; N/A       ; N/A     ; 1.666               ;
+;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 32.472    ; 0.223  ; -6.129    ; 0.878   ; 18.756              ;
+;  fall_timer_1[0]                                                                           ; -8.574    ; 0.330  ; -4.466    ; 0.169   ; -0.701              ;
+;  music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -3.857    ; 0.125  ; -7.057    ; 1.976   ; -0.394              ;
+; Design-wide TNS                                                                            ; -2997.445 ; -8.829 ; -1569.231 ; 0.0     ; -46.843             ;
+;  CLOCK_50                                                                                  ; -2605.810 ; -8.829 ; -1135.444 ; 0.000   ; 0.000               ;
+;  KEY[0]                                                                                    ; -79.749   ; 0.000  ; N/A       ; N/A     ; -3.559              ;
+;  KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; -30.817   ; 0.000  ; -13.512   ; 0.000   ; 0.000               ;
+;  VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]            ; N/A       ; N/A    ; N/A       ; N/A     ; 0.000               ;
+;  VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 0.000     ; 0.000  ; -159.286  ; 0.000   ; 0.000               ;
+;  fall_timer_1[0]                                                                           ; -92.504   ; 0.000  ; -46.425   ; 0.000   ; -11.035             ;
+;  music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; -192.873  ; 0.000  ; -214.894  ; 0.000   ; -35.610             ;
++--------------------------------------------------------------------------------------------+-----------+--------+-----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -523,20 +523,6 @@ No synchronizer chains to report.
 ; HEX4[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX4[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX4[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX2[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX2[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX2[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX2[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX2[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX2[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX2[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX3[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX3[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX3[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX3[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX3[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX3[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; HEX3[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; LEDR[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; LEDR[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; LEDR[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -631,20 +617,6 @@ No synchronizer chains to report.
 ; HEX4[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; HEX4[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; HEX4[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; HEX2[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; HEX2[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; HEX2[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; HEX2[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
@@ -722,20 +694,6 @@ No synchronizer chains to report.
 ; HEX4[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX4[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; HEX4[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; HEX2[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; HEX2[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; HEX2[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; HEX2[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
@@ -813,20 +771,6 @@ No synchronizer chains to report.
 ; HEX4[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; HEX4[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; HEX4[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; HEX2[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; HEX2[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; HEX2[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; HEX2[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
@@ -904,20 +848,6 @@ No synchronizer chains to report.
 ; HEX4[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; HEX4[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; HEX4[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; HEX2[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; HEX2[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
-; HEX2[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; HEX2[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
-; HEX2[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
-; HEX2[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; HEX2[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; HEX3[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; HEX3[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; HEX3[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; HEX3[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; HEX3[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
-; HEX3[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; HEX3[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
@@ -976,17 +906,17 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; CLOCK_50                                                                                  ; CLOCK_50                                                                                  ; > 2147483647 ; 0        ; 0        ; 0        ;
 ; fall_timer_1[0]                                                                           ; CLOCK_50                                                                                  ; 77           ; 77       ; 0        ; 0        ;
-; KEY[0]                                                                                    ; CLOCK_50                                                                                  ; 12405        ; 6367     ; 0        ; 0        ;
+; KEY[0]                                                                                    ; CLOCK_50                                                                                  ; 13509        ; 6919     ; 0        ; 0        ;
 ; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; CLOCK_50                                                                                  ; 4            ; 8        ; 0        ; 0        ;
 ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; CLOCK_50                                                                                  ; 1            ; 1        ; 0        ; 0        ;
-; CLOCK_50                                                                                  ; fall_timer_1[0]                                                                           ; 22901        ; 0        ; 0        ; 0        ;
+; CLOCK_50                                                                                  ; fall_timer_1[0]                                                                           ; 23119        ; 0        ; 0        ; 0        ;
 ; fall_timer_1[0]                                                                           ; fall_timer_1[0]                                                                           ; 105          ; 0        ; 0        ; 0        ;
-; KEY[0]                                                                                    ; fall_timer_1[0]                                                                           ; 1812         ; 906      ; 0        ; 0        ;
+; KEY[0]                                                                                    ; fall_timer_1[0]                                                                           ; 1824         ; 912      ; 0        ; 0        ;
 ; CLOCK_50                                                                                  ; KEY[0]                                                                                    ; 366          ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                  ; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0            ; 0        ; 65       ; 0        ;
 ; KEY[0]                                                                                    ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 36           ; 36       ; 0        ; 0        ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 741          ; 0        ; 0        ; 0        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 2295         ; 0        ; 0        ; 0        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 705          ; 0        ; 0        ; 0        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 2247         ; 0        ; 0        ; 0        ;
 +-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -998,17 +928,17 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 ; CLOCK_50                                                                                  ; CLOCK_50                                                                                  ; > 2147483647 ; 0        ; 0        ; 0        ;
 ; fall_timer_1[0]                                                                           ; CLOCK_50                                                                                  ; 77           ; 77       ; 0        ; 0        ;
-; KEY[0]                                                                                    ; CLOCK_50                                                                                  ; 12405        ; 6367     ; 0        ; 0        ;
+; KEY[0]                                                                                    ; CLOCK_50                                                                                  ; 13509        ; 6919     ; 0        ; 0        ;
 ; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; CLOCK_50                                                                                  ; 4            ; 8        ; 0        ; 0        ;
 ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; CLOCK_50                                                                                  ; 1            ; 1        ; 0        ; 0        ;
-; CLOCK_50                                                                                  ; fall_timer_1[0]                                                                           ; 22901        ; 0        ; 0        ; 0        ;
+; CLOCK_50                                                                                  ; fall_timer_1[0]                                                                           ; 23119        ; 0        ; 0        ; 0        ;
 ; fall_timer_1[0]                                                                           ; fall_timer_1[0]                                                                           ; 105          ; 0        ; 0        ; 0        ;
-; KEY[0]                                                                                    ; fall_timer_1[0]                                                                           ; 1812         ; 906      ; 0        ; 0        ;
+; KEY[0]                                                                                    ; fall_timer_1[0]                                                                           ; 1824         ; 912      ; 0        ; 0        ;
 ; CLOCK_50                                                                                  ; KEY[0]                                                                                    ; 366          ; 0        ; 0        ; 0        ;
 ; CLOCK_50                                                                                  ; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0            ; 0        ; 65       ; 0        ;
 ; KEY[0]                                                                                    ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 36           ; 36       ; 0        ; 0        ;
-; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 741          ; 0        ; 0        ; 0        ;
-; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 2295         ; 0        ; 0        ; 0        ;
+; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 705          ; 0        ; 0        ; 0        ;
+; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 2247         ; 0        ; 0        ; 0        ;
 +-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1018,11 +948,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+-------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-------------------------------------------------------------------------------------------+----------+----------+----------+----------+
-; KEY[0]     ; CLOCK_50                                                                                  ; 288      ; 288      ; 0        ; 0        ;
+; KEY[0]     ; CLOCK_50                                                                                  ; 306      ; 306      ; 0        ; 0        ;
 ; KEY[0]     ; fall_timer_1[0]                                                                           ; 11       ; 11       ; 0        ; 0        ;
 ; KEY[0]     ; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0        ; 0        ; 4        ; 4        ;
-; KEY[0]     ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 35       ; 35       ; 0        ; 0        ;
-; KEY[0]     ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 29       ; 29       ; 0        ; 0        ;
+; KEY[0]     ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 31       ; 31       ; 0        ; 0        ;
+; KEY[0]     ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 26       ; 26       ; 0        ; 0        ;
 +------------+-------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1032,11 +962,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+-------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-------------------------------------------------------------------------------------------+----------+----------+----------+----------+
-; KEY[0]     ; CLOCK_50                                                                                  ; 288      ; 288      ; 0        ; 0        ;
+; KEY[0]     ; CLOCK_50                                                                                  ; 306      ; 306      ; 0        ; 0        ;
 ; KEY[0]     ; fall_timer_1[0]                                                                           ; 11       ; 11       ; 0        ; 0        ;
 ; KEY[0]     ; KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en ; 0        ; 0        ; 4        ; 4        ;
-; KEY[0]     ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 35       ; 35       ; 0        ; 0        ;
-; KEY[0]     ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 29       ; 29       ; 0        ; 0        ;
+; KEY[0]     ; music:bg_music|avconf:avc|mI2C_CTRL_CLK                                                   ; 31       ; 31       ; 0        ; 0        ;
+; KEY[0]     ; VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk          ; 26       ; 26       ; 0        ; 0        ;
 +------------+-------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1062,8 +992,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 6     ; 6    ;
 ; Unconstrained Input Port Paths  ; 9     ; 9    ;
-; Unconstrained Output Ports      ; 70    ; 70   ;
-; Unconstrained Output Port Paths ; 723   ; 723  ;
+; Unconstrained Output Ports      ; 56    ; 56   ;
+; Unconstrained Output Port Paths ; 677   ; 677  ;
 +---------------------------------+-------+------+
 
 
@@ -1112,20 +1042,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX0[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX4[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX4[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX4[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1204,20 +1120,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX0[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX4[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX4[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX4[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1273,7 +1175,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 26 03:18:00 2024
+    Info: Processing started: Tue Nov 26 13:57:27 2024
 Info: Command: quartus_sta fruit_game -c fruit_game
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1300,57 +1202,57 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
     Info (332098): Cell: bg_music|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
-    Info (332098): Cell: comb~0  from: dataa  to: combout
+    Info (332098): Cell: comb~0  from: datac  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -35.042
+Info (332146): Worst-case setup slack is -35.953
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -35.042           -2435.490 CLOCK_50 
-    Info (332119):    -8.987             -96.072 fall_timer_1[0] 
-    Info (332119):    -8.804             -31.648 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -5.456             -74.937 KEY[0] 
-    Info (332119):    -3.383            -184.786 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    34.672               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -4.054
+    Info (332119):   -35.953           -2605.810 CLOCK_50 
+    Info (332119):    -8.379             -90.924 fall_timer_1[0] 
+    Info (332119):    -8.279             -30.309 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -5.741             -77.529 KEY[0] 
+    Info (332119):    -3.857            -192.873 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    32.472               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -4.318
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.054             -12.098 CLOCK_50 
-    Info (332119):     0.328               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.379               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.891               0.000 fall_timer_1[0] 
-    Info (332119):     1.161               0.000 KEY[0] 
-    Info (332119):     4.687               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-Info (332146): Worst-case recovery slack is -7.040
+    Info (332119):    -4.318              -8.329 CLOCK_50 
+    Info (332119):     0.380               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.439               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.853               0.000 fall_timer_1[0] 
+    Info (332119):     1.322               0.000 KEY[0] 
+    Info (332119):     4.644               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+Info (332146): Worst-case recovery slack is -7.057
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.040            -245.410 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    -6.130            -177.647 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -5.147             -56.159 fall_timer_1[0] 
-    Info (332119):    -4.170             -14.102 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -3.769           -1072.026 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.337
+    Info (332119):    -7.057            -214.894 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -6.129            -159.286 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -4.447             -46.126 fall_timer_1[0] 
+    Info (332119):    -3.779             -13.481 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -3.731           -1135.444 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.373
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.337               0.000 CLOCK_50 
-    Info (332119):     1.510               0.000 fall_timer_1[0] 
-    Info (332119):     1.516               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     1.937               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     3.980               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     0.373               0.000 CLOCK_50 
+    Info (332119):     0.407               0.000 fall_timer_1[0] 
+    Info (332119):     1.503               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     2.227               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     3.733               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+Info (332146): Worst-case minimum pulse width slack is -0.701
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -39.043 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    -0.394              -6.548 fall_timer_1[0] 
-    Info (332119):    -0.006              -0.009 KEY[0] 
-    Info (332119):     0.445               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.701             -11.035 fall_timer_1[0] 
+    Info (332119):    -0.394             -35.610 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -0.066              -0.198 KEY[0] 
+    Info (332119):     0.465               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.827               0.000 CLOCK_50 
-    Info (332119):    18.777               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.828               0.000 CLOCK_50 
+    Info (332119):    18.779               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1360,54 +1262,54 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
     Info (332098): Cell: bg_music|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
-    Info (332098): Cell: comb~0  from: dataa  to: combout
+    Info (332098): Cell: comb~0  from: datac  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -35.830
+Info (332146): Worst-case setup slack is -36.743
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -35.830           -2329.504 CLOCK_50 
-    Info (332119):    -8.961             -96.109 fall_timer_1[0] 
-    Info (332119):    -8.851             -31.847 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -5.640             -76.796 KEY[0] 
-    Info (332119):    -3.299            -180.774 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    34.916               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -4.111
+    Info (332119):   -36.743           -2507.299 CLOCK_50 
+    Info (332119):    -8.574             -92.504 fall_timer_1[0] 
+    Info (332119):    -8.368             -30.817 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -5.851             -79.749 KEY[0] 
+    Info (332119):    -3.749            -188.325 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    32.816               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -4.392
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.111             -12.371 CLOCK_50 
-    Info (332119):     0.314               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.388               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.862               0.000 fall_timer_1[0] 
-    Info (332119):     1.232               0.000 KEY[0] 
-    Info (332119):     4.738               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-Info (332146): Worst-case recovery slack is -6.981
+    Info (332119):    -4.392              -8.829 CLOCK_50 
+    Info (332119):     0.369               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.420               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.870               0.000 fall_timer_1[0] 
+    Info (332119):     1.413               0.000 KEY[0] 
+    Info (332119):     4.694               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+Info (332146): Worst-case recovery slack is -6.994
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.981            -243.363 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    -5.960            -172.737 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -5.047             -55.156 fall_timer_1[0] 
-    Info (332119):    -4.174             -14.082 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -3.540           -1008.927 CLOCK_50 
-Info (332146): Worst-case removal slack is 0.262
+    Info (332119):    -6.994            -213.220 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -5.956            -154.773 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -4.466             -46.425 fall_timer_1[0] 
+    Info (332119):    -3.798             -13.512 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -3.508           -1067.753 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.292
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.262               0.000 CLOCK_50 
-    Info (332119):     1.527               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     1.576               0.000 fall_timer_1[0] 
-    Info (332119):     1.881               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     4.043               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     0.292               0.000 CLOCK_50 
+    Info (332119):     0.557               0.000 fall_timer_1[0] 
+    Info (332119):     1.517               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     2.133               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     3.818               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+Info (332146): Worst-case minimum pulse width slack is -0.657
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -38.423 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    -0.394              -6.290 fall_timer_1[0] 
-    Info (332119):    -0.001              -0.001 KEY[0] 
-    Info (332119):     0.413               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.657             -10.537 fall_timer_1[0] 
+    Info (332119):    -0.394             -34.815 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -0.037              -0.069 KEY[0] 
+    Info (332119):     0.438               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.787               0.000 CLOCK_50 
-    Info (332119):    18.759               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.788               0.000 CLOCK_50 
+    Info (332119):    18.756               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1417,53 +1319,53 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
     Info (332098): Cell: bg_music|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
-    Info (332098): Cell: comb~0  from: dataa  to: combout
+    Info (332098): Cell: comb~0  from: datac  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.751
+Info (332146): Worst-case setup slack is -11.054
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.751           -1356.370 CLOCK_50 
-    Info (332119):    -4.910             -52.679 fall_timer_1[0] 
-    Info (332119):    -4.775             -16.899 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -2.802             -37.764 KEY[0] 
-    Info (332119):    -2.157            -105.690 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    36.153               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -2.142
+    Info (332119):   -11.054           -1443.071 CLOCK_50 
+    Info (332119):    -4.462             -48.077 fall_timer_1[0] 
+    Info (332119):    -4.441             -15.945 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -2.899             -37.800 KEY[0] 
+    Info (332119):    -2.380            -109.811 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    34.493               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -2.263
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.142              -6.392 CLOCK_50 
-    Info (332119):     0.139               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.195               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.455               0.000 fall_timer_1[0] 
-    Info (332119):     0.681               0.000 KEY[0] 
-    Info (332119):     2.767               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-Info (332146): Worst-case recovery slack is -4.210
+    Info (332119):    -2.263              -4.395 CLOCK_50 
+    Info (332119):     0.138               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.247               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.330               0.000 fall_timer_1[0] 
+    Info (332119):     0.768               0.000 KEY[0] 
+    Info (332119):     2.815               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+Info (332146): Worst-case recovery slack is -4.213
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.210            -146.671 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    -3.613            -104.701 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -3.212             -35.085 fall_timer_1[0] 
-    Info (332119):    -2.525            -646.920 CLOCK_50 
-    Info (332119):    -2.185              -6.894 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-Info (332146): Worst-case removal slack is 0.094
+    Info (332119):    -4.213            -128.164 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -3.614             -93.913 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -2.815            -685.154 CLOCK_50 
+    Info (332119):    -2.716             -28.080 fall_timer_1[0] 
+    Info (332119):    -1.846              -6.485 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+Info (332146): Worst-case removal slack is 0.116
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.094               0.000 CLOCK_50 
-    Info (332119):     0.919               0.000 fall_timer_1[0] 
-    Info (332119):     0.932               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     1.317               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     2.133               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-Info (332146): Worst-case minimum pulse width slack is -0.194
+    Info (332119):     0.116               0.000 CLOCK_50 
+    Info (332119):     0.169               0.000 fall_timer_1[0] 
+    Info (332119):     0.926               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     1.532               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     1.986               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+Info (332146): Worst-case minimum pulse width slack is -0.455
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.194              -4.956 KEY[0] 
-    Info (332119):    -0.047              -0.047 fall_timer_1[0] 
-    Info (332119):     0.047               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.432               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.455              -4.364 fall_timer_1[0] 
+    Info (332119):    -0.228              -3.559 KEY[0] 
+    Info (332119):     0.083               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.487               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.814               0.000 CLOCK_50 
+    Info (332119):     8.820               0.000 CLOCK_50 
     Info (332119):    18.891               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
@@ -1472,60 +1374,60 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
     Info (332098): Cell: bg_music|Audio_Controller|Audio_Clock|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
-    Info (332098): Cell: comb~0  from: dataa  to: combout
+    Info (332098): Cell: comb~0  from: datac  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.709
+Info (332146): Worst-case setup slack is -9.105
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.709           -1145.263 CLOCK_50 
-    Info (332119):    -4.569             -49.142 fall_timer_1[0] 
-    Info (332119):    -4.528             -16.141 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):    -2.625             -35.661 KEY[0] 
-    Info (332119):    -2.088             -99.115 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    36.645               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is -2.109
+    Info (332119):    -9.105           -1214.598 CLOCK_50 
+    Info (332119):    -4.265             -45.495 fall_timer_1[0] 
+    Info (332119):    -4.239             -15.351 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -2.730             -35.761 KEY[0] 
+    Info (332119):    -2.282            -102.967 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    35.213               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is -2.231
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.109              -6.295 CLOCK_50 
-    Info (332119):     0.126               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.177               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.408               0.000 fall_timer_1[0] 
-    Info (332119):     0.686               0.000 KEY[0] 
-    Info (332119):     2.727               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -2.231              -4.330 CLOCK_50 
+    Info (332119):     0.125               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.223               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.403               0.000 fall_timer_1[0] 
+    Info (332119):     0.752               0.000 KEY[0] 
+    Info (332119):     2.758               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
 Info (332146): Worst-case recovery slack is -4.144
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.144            -144.452 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):    -3.509            -101.689 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -3.194             -34.934 fall_timer_1[0] 
-    Info (332119):    -2.256            -621.327 CLOCK_50 
-    Info (332119):    -2.033              -6.556 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-Info (332146): Worst-case removal slack is 0.039
+    Info (332119):    -4.144            -126.316 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):    -3.510             -91.211 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -2.781             -28.934 fall_timer_1[0] 
+    Info (332119):    -2.489            -658.520 CLOCK_50 
+    Info (332119):    -1.773              -6.241 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+Info (332146): Worst-case removal slack is 0.057
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.039               0.000 CLOCK_50 
-    Info (332119):     0.887               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.977               0.000 fall_timer_1[0] 
-    Info (332119):     1.329               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
-    Info (332119):     2.107               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-Info (332146): Worst-case minimum pulse width slack is -0.176
+    Info (332119):     0.057               0.000 CLOCK_50 
+    Info (332119):     0.314               0.000 fall_timer_1[0] 
+    Info (332119):     0.878               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     1.504               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):     1.976               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+Info (332146): Worst-case minimum pulse width slack is -0.335
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.176              -4.741 KEY[0] 
-    Info (332119):     0.003               0.000 fall_timer_1[0] 
-    Info (332119):     0.073               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
-    Info (332119):     0.450               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
+    Info (332119):    -0.335              -2.954 fall_timer_1[0] 
+    Info (332119):    -0.192              -3.205 KEY[0] 
+    Info (332119):     0.102               0.000 music:bg_music|avconf:avc|mI2C_CTRL_CLK 
+    Info (332119):     0.485               0.000 KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en 
     Info (332119):     1.666               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.810               0.000 CLOCK_50 
-    Info (332119):    18.888               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.812               0.000 CLOCK_50 
+    Info (332119):    18.889               0.000 VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5381 megabytes
-    Info: Processing ended: Tue Nov 26 03:18:11 2024
+    Info: Peak virtual memory: 5378 megabytes
+    Info: Processing ended: Tue Nov 26 13:57:38 2024
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 

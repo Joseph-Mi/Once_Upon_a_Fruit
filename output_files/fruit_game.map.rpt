@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fruit_game
-Tue Nov 26 03:15:12 2024
+Tue Nov 26 13:54:34 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -30,7 +30,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  22. Multiplexer Restructuring Statistics (Restructuring Performed)
  23. Source assignments for image_colour:bg_ROM|altsyncram:altsyncram_component|altsyncram_3tg1:auto_generated
  24. Source assignments for orange:orange_ROM1|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated
- 25. Source assignments for orange2:orange_ROM2|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated
+ 25. Source assignments for watermelon:orange_ROM2|altsyncram:altsyncram_component|altsyncram_uig1:auto_generated
  26. Source assignments for bucket:player_ROM|altsyncram:altsyncram_component|altsyncram_u4g1:auto_generated
  27. Source assignments for music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
  28. Source assignments for music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
@@ -41,7 +41,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  33. Parameter Settings for User Entity Instance: vga_address_translator:addr_inst
  34. Parameter Settings for User Entity Instance: image_colour:bg_ROM|altsyncram:altsyncram_component
  35. Parameter Settings for User Entity Instance: orange:orange_ROM1|altsyncram:altsyncram_component
- 36. Parameter Settings for User Entity Instance: orange2:orange_ROM2|altsyncram:altsyncram_component
+ 36. Parameter Settings for User Entity Instance: watermelon:orange_ROM2|altsyncram:altsyncram_component
  37. Parameter Settings for User Entity Instance: bucket:player_ROM|altsyncram:altsyncram_component
  38. Parameter Settings for User Entity Instance: KeyboardModule:move
  39. Parameter Settings for User Entity Instance: KeyboardModule:move|PS2_Controller:PS2
@@ -80,10 +80,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  72. Port Connectivity Checks: "KeyboardModule:move|SpeedUpCounter:speedUpCounter"
  73. Port Connectivity Checks: "KeyboardModule:move|PS2_Controller:PS2"
  74. Port Connectivity Checks: "KeyboardModule:move"
- 75. Post-Synthesis Netlist Statistics for Top Partition
- 76. Elapsed Time Per Partition
- 77. Analysis & Synthesis Messages
- 78. Analysis & Synthesis Suppressed Messages
+ 75. Port Connectivity Checks: "hex7seg:H0"
+ 76. Port Connectivity Checks: "hex7seg:H1"
+ 77. Port Connectivity Checks: "watermelon:orange_ROM2"
+ 78. Post-Synthesis Netlist Statistics for Top Partition
+ 79. Elapsed Time Per Partition
+ 80. Analysis & Synthesis Messages
+ 81. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -110,14 +113,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 26 03:15:12 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 26 13:54:33 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; fruit_game                                  ;
 ; Top-level Entity Name           ; fruit_game                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 590                                         ;
-; Total pins                      ; 86                                          ;
+; Total pins                      ; 72                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 124,544                                     ;
 ; Total DSP Blocks                ; 1                                           ;
@@ -236,8 +239,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processors 8-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -270,9 +272,9 @@ https://fpgasoftware.intel.com/eula.
 ; bucket.v                                           ; yes             ; User Wizard-Generated File             ; C:/Users/jmjos/Documents/ECE241/fruit_game/bucket.v                                           ;         ;
 ; image_colour.v                                     ; yes             ; User Wizard-Generated File             ; C:/Users/jmjos/Documents/ECE241/fruit_game/image_colour.v                                     ;         ;
 ; orange.v                                           ; yes             ; User Wizard-Generated File             ; C:/Users/jmjos/Documents/ECE241/fruit_game/orange.v                                           ;         ;
-; orange2.v                                          ; yes             ; User Wizard-Generated File             ; C:/Users/jmjos/Documents/ECE241/fruit_game/orange2.v                                          ;         ;
 ; collision.v                                        ; yes             ; User Verilog HDL File                  ; C:/Users/jmjos/Documents/ECE241/fruit_game/collision.v                                        ;         ;
 ; lives.v                                            ; yes             ; User Verilog HDL File                  ; C:/Users/jmjos/Documents/ECE241/fruit_game/lives.v                                            ;         ;
+; watermelon.v                                       ; yes             ; User Wizard-Generated File             ; C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.v                                       ;         ;
 ; altsyncram.tdf                                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/quartus/libraries/megafunctions/altsyncram.tdf                              ;         ;
 ; stratix_ram_block.inc                              ; yes             ; Megafunction                           ; c:/intelfpga_lite/quartus/libraries/megafunctions/stratix_ram_block.inc                       ;         ;
 ; lpm_mux.inc                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/quartus/libraries/megafunctions/lpm_mux.inc                                 ;         ;
@@ -288,6 +290,8 @@ https://fpgasoftware.intel.com/eula.
 ; db/mux_ifb.tdf                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/jmjos/Documents/ECE241/fruit_game/db/mux_ifb.tdf                                     ;         ;
 ; db/altsyncram_73g1.tdf                             ; yes             ; Auto-Generated Megafunction            ; C:/Users/jmjos/Documents/ECE241/fruit_game/db/altsyncram_73g1.tdf                             ;         ;
 ; orange.mif                                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/jmjos/Documents/ECE241/fruit_game/orange.mif                                         ;         ;
+; db/altsyncram_uig1.tdf                             ; yes             ; Auto-Generated Megafunction            ; C:/Users/jmjos/Documents/ECE241/fruit_game/db/altsyncram_uig1.tdf                             ;         ;
+; watermelon.mif                                     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.mif                                     ;         ;
 ; db/altsyncram_u4g1.tdf                             ; yes             ; Auto-Generated Megafunction            ; C:/Users/jmjos/Documents/ECE241/fruit_game/db/altsyncram_u4g1.tdf                             ;         ;
 ; bucket.mif                                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/jmjos/Documents/ECE241/fruit_game/bucket.mif                                         ;         ;
 ; scfifo.tdf                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/quartus/libraries/megafunctions/scfifo.tdf                                  ;         ;
@@ -325,18 +329,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1041           ;
+; Estimate of Logic utilization (ALMs needed) ; 1042           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1875           ;
-;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 197            ;
-;     -- 5 input functions                    ; 322            ;
-;     -- 4 input functions                    ; 297            ;
-;     -- <=3 input functions                  ; 1056           ;
+; Combinational ALUT usage for logic          ; 1869           ;
+;     -- 7 input functions                    ; 2              ;
+;     -- 6 input functions                    ; 206            ;
+;     -- 5 input functions                    ; 315            ;
+;     -- 4 input functions                    ; 276            ;
+;     -- <=3 input functions                  ; 1070           ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 590            ;
 ;                                             ;                ;
-; I/O pins                                    ; 86             ;
+; I/O pins                                    ; 72             ;
 ; Total MLAB memory bits                      ; 0              ;
 ; Total block memory bits                     ; 124544         ;
 ;                                             ;                ;
@@ -347,8 +351,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 584            ;
-; Total fan-out                               ; 10326          ;
-; Average fan-out                             ; 3.77           ;
+; Total fan-out                               ; 10247          ;
+; Average fan-out                             ; 3.79           ;
 +---------------------------------------------+----------------+
 
 
@@ -357,30 +361,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node                                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                        ; Entity Name                    ; Library Name ;
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
-; |fruit_game                                                    ; 1875 (504)          ; 590 (202)                 ; 124544            ; 1          ; 86   ; 0            ; |fruit_game                                                                                                                                                                                                                                                ; fruit_game                     ; work         ;
-;    |KeyboardModule:move|                                       ; 117 (15)            ; 94 (4)                    ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|KeyboardModule:move                                                                                                                                                                                                                            ; KeyboardModule                 ; work         ;
-;       |PS2_Controller:PS2|                                     ; 102 (7)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2                                                                                                                                                                                                         ; PS2_Controller                 ; work         ;
-;          |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 81 (81)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                               ; Altera_UP_PS2_Command_Out      ; work         ;
+; |fruit_game                                                    ; 1869 (508)          ; 590 (202)                 ; 124544            ; 1          ; 72   ; 0            ; |fruit_game                                                                                                                                                                                                                                                ; fruit_game                     ; work         ;
+;    |KeyboardModule:move|                                       ; 119 (15)            ; 94 (4)                    ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|KeyboardModule:move                                                                                                                                                                                                                            ; KeyboardModule                 ; work         ;
+;       |PS2_Controller:PS2|                                     ; 104 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2                                                                                                                                                                                                         ; PS2_Controller                 ; work         ;
+;          |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 84 (84)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                               ; Altera_UP_PS2_Command_Out      ; work         ;
 ;          |Altera_UP_PS2_Data_In:PS2_Data_In|                   ; 14 (14)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In                                                                                                                                                                       ; Altera_UP_PS2_Data_In          ; work         ;
 ;    |bucket:player_ROM|                                         ; 0 (0)               ; 0 (0)                     ; 768               ; 0          ; 0    ; 0            ; |fruit_game|bucket:player_ROM                                                                                                                                                                                                                              ; bucket                         ; work         ;
 ;       |altsyncram:altsyncram_component|                        ; 0 (0)               ; 0 (0)                     ; 768               ; 0          ; 0    ; 0            ; |fruit_game|bucket:player_ROM|altsyncram:altsyncram_component                                                                                                                                                                                              ; altsyncram                     ; work         ;
 ;          |altsyncram_u4g1:auto_generated|                      ; 0 (0)               ; 0 (0)                     ; 768               ; 0          ; 0    ; 0            ; |fruit_game|bucket:player_ROM|altsyncram:altsyncram_component|altsyncram_u4g1:auto_generated                                                                                                                                                               ; altsyncram_u4g1                ; work         ;
-;    |collisionDetect:collision_unit1|                           ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|collisionDetect:collision_unit1                                                                                                                                                                                                                ; collisionDetect                ; work         ;
-;    |collisionDetect:collision_unit2|                           ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|collisionDetect:collision_unit2                                                                                                                                                                                                                ; collisionDetect                ; work         ;
+;    |collisionDetect:collision_unit1|                           ; 29 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|collisionDetect:collision_unit1                                                                                                                                                                                                                ; collisionDetect                ; work         ;
+;    |collisionDetect:collision_unit2|                           ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|collisionDetect:collision_unit2                                                                                                                                                                                                                ; collisionDetect                ; work         ;
 ;    |displayLives:lives_display_module|                         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|displayLives:lives_display_module                                                                                                                                                                                                              ; displayLives                   ; work         ;
-;    |hex7seg:H0|                                                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|hex7seg:H0                                                                                                                                                                                                                                     ; hex7seg                        ; work         ;
-;    |hex7seg:H1|                                                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|hex7seg:H1                                                                                                                                                                                                                                     ; hex7seg                        ; work         ;
 ;    |image_colour:bg_ROM|                                       ; 3 (0)               ; 2 (0)                     ; 57600             ; 0          ; 0    ; 0            ; |fruit_game|image_colour:bg_ROM                                                                                                                                                                                                                            ; image_colour                   ; work         ;
 ;       |altsyncram:altsyncram_component|                        ; 3 (0)               ; 2 (0)                     ; 57600             ; 0          ; 0    ; 0            ; |fruit_game|image_colour:bg_ROM|altsyncram:altsyncram_component                                                                                                                                                                                            ; altsyncram                     ; work         ;
 ;          |altsyncram_3tg1:auto_generated|                      ; 3 (0)               ; 2 (2)                     ; 57600             ; 0          ; 0    ; 0            ; |fruit_game|image_colour:bg_ROM|altsyncram:altsyncram_component|altsyncram_3tg1:auto_generated                                                                                                                                                             ; altsyncram_3tg1                ; work         ;
 ;             |decode_01a:rden_decode|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|image_colour:bg_ROM|altsyncram:altsyncram_component|altsyncram_3tg1:auto_generated|decode_01a:rden_decode                                                                                                                                      ; decode_01a                     ; work         ;
-;    |music:bg_music|                                            ; 1057 (94)           ; 235 (50)                  ; 8192              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music                                                                                                                                                                                                                                 ; music                          ; work         ;
-;       |Audio_Controller:Audio_Controller|                      ; 154 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller                                                                                                                                                                                               ; Audio_Controller               ; work         ;
-;          |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 151 (56)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer ; work         ;
-;             |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|  ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO            ; work         ;
-;                |scfifo:Sync_FIFO|                              ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                         ; work         ;
-;                   |scfifo_7ba1:auto_generated|                 ; 48 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                               ; scfifo_7ba1                    ; work         ;
-;                      |a_dpfifo_q2a1:dpfifo|                    ; 48 (25)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                          ; a_dpfifo_q2a1                  ; work         ;
+;    |music:bg_music|                                            ; 1055 (94)           ; 235 (50)                  ; 8192              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music                                                                                                                                                                                                                                 ; music                          ; work         ;
+;       |Audio_Controller:Audio_Controller|                      ; 151 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller                                                                                                                                                                                               ; Audio_Controller               ; work         ;
+;          |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 149 (55)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer ; work         ;
+;             |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|  ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO            ; work         ;
+;                |scfifo:Sync_FIFO|                              ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                         ; work         ;
+;                   |scfifo_7ba1:auto_generated|                 ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                               ; scfifo_7ba1                    ; work         ;
+;                      |a_dpfifo_q2a1:dpfifo|                    ; 47 (24)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                          ; a_dpfifo_q2a1                  ; work         ;
 ;                         |altsyncram_n3i1:FIFOram|              ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram  ; altsyncram_n3i1                ; work         ;
 ;                         |cntr_h2b:rd_ptr_msb|                  ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_h2b:rd_ptr_msb      ; cntr_h2b                       ; work         ;
 ;                         |cntr_i2b:wr_ptr|                      ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_i2b:wr_ptr          ; cntr_i2b                       ; work         ;
@@ -394,23 +396,20 @@ https://fpgasoftware.intel.com/eula.
 ;                         |cntr_i2b:wr_ptr|                      ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_i2b:wr_ptr         ; cntr_i2b                       ; work         ;
 ;                         |cntr_u27:usedw_counter|               ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter  ; cntr_u27                       ; work         ;
 ;          |Altera_UP_Clock_Edge:Bit_Clock_Edges|                ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:Bit_Clock_Edges                                                                                                                                                          ; Altera_UP_Clock_Edge           ; work         ;
-;          |Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|     ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges                                                                                                                                               ; Altera_UP_Clock_Edge           ; work         ;
+;          |Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|     ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges                                                                                                                                               ; Altera_UP_Clock_Edge           ; work         ;
 ;          |Audio_Clock:Audio_Clock|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock                                                                                                                                                                       ; Audio_Clock                    ; work         ;
 ;             |altpll:altpll_component|                          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component                                                                                                                                               ; altpll                         ; work         ;
 ;                |Audio_Clock_altpll:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated                                                                                                             ; Audio_Clock_altpll             ; work         ;
 ;       |avconf:avc|                                             ; 94 (53)             ; 75 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|avconf:avc                                                                                                                                                                                                                      ; avconf                         ; work         ;
 ;          |I2C_Controller:u0|                                   ; 41 (41)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|avconf:avc|I2C_Controller:u0                                                                                                                                                                                                    ; I2C_Controller                 ; work         ;
-;       |lpm_divide:Div0|                                        ; 715 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0                                                                                                                                                                                                                 ; lpm_divide                     ; work         ;
-;          |lpm_divide_9dm:auto_generated|                       ; 715 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0|lpm_divide_9dm:auto_generated                                                                                                                                                                                   ; lpm_divide_9dm                 ; work         ;
-;             |sign_div_unsign_fnh:divider|                      ; 715 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0|lpm_divide_9dm:auto_generated|sign_div_unsign_fnh:divider                                                                                                                                                       ; sign_div_unsign_fnh            ; work         ;
-;                |alt_u_div_43f:divider|                         ; 715 (715)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0|lpm_divide_9dm:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_43f:divider                                                                                                                                 ; alt_u_div_43f                  ; work         ;
-;    |orange2:orange_ROM2|                                       ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|orange2:orange_ROM2                                                                                                                                                                                                                            ; orange2                        ; work         ;
-;       |altsyncram:altsyncram_component|                        ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|orange2:orange_ROM2|altsyncram:altsyncram_component                                                                                                                                                                                            ; altsyncram                     ; work         ;
-;          |altsyncram_73g1:auto_generated|                      ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|orange2:orange_ROM2|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated                                                                                                                                                             ; altsyncram_73g1                ; work         ;
+;       |lpm_divide:Div0|                                        ; 716 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0                                                                                                                                                                                                                 ; lpm_divide                     ; work         ;
+;          |lpm_divide_9dm:auto_generated|                       ; 716 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0|lpm_divide_9dm:auto_generated                                                                                                                                                                                   ; lpm_divide_9dm                 ; work         ;
+;             |sign_div_unsign_fnh:divider|                      ; 716 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0|lpm_divide_9dm:auto_generated|sign_div_unsign_fnh:divider                                                                                                                                                       ; sign_div_unsign_fnh            ; work         ;
+;                |alt_u_div_43f:divider|                         ; 716 (716)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|music:bg_music|lpm_divide:Div0|lpm_divide_9dm:auto_generated|sign_div_unsign_fnh:divider|alt_u_div_43f:divider                                                                                                                                 ; alt_u_div_43f                  ; work         ;
 ;    |orange:orange_ROM1|                                        ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|orange:orange_ROM1                                                                                                                                                                                                                             ; orange                         ; work         ;
 ;       |altsyncram:altsyncram_component|                        ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|orange:orange_ROM1|altsyncram:altsyncram_component                                                                                                                                                                                             ; altsyncram                     ; work         ;
 ;          |altsyncram_73g1:auto_generated|                      ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|orange:orange_ROM1|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated                                                                                                                                                              ; altsyncram_73g1                ; work         ;
-;    |pointsystem:point_unit|                                    ; 13 (13)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|pointsystem:point_unit                                                                                                                                                                                                                         ; pointsystem                    ; work         ;
+;    |pointsystem:point_unit|                                    ; 14 (14)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|pointsystem:point_unit                                                                                                                                                                                                                         ; pointsystem                    ; work         ;
 ;    |rand_fruit_x:RNG|                                          ; 14 (14)             ; 16 (16)                   ; 0                 ; 1          ; 0    ; 0            ; |fruit_game|rand_fruit_x:RNG                                                                                                                                                                                                                               ; rand_fruit_x                   ; work         ;
 ;    |scoreDisplayWithHex:display_unit|                          ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|scoreDisplayWithHex:display_unit                                                                                                                                                                                                               ; scoreDisplayWithHex            ; work         ;
 ;    |vga_adapter:VGA|                                           ; 78 (5)              ; 30 (0)                    ; 57600             ; 0          ; 0    ; 0            ; |fruit_game|vga_adapter:VGA                                                                                                                                                                                                                                ; vga_adapter                    ; work         ;
@@ -425,6 +424,9 @@ https://fpgasoftware.intel.com/eula.
 ;          |altpll:altpll_component|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component                                                                                                                                                                                          ; altpll                         ; work         ;
 ;             |altpll_80u:auto_generated|                        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                                                                                                                                                                ; altpll_80u                     ; work         ;
 ;    |vga_address_translator:addr_inst|                          ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fruit_game|vga_address_translator:addr_inst                                                                                                                                                                                                               ; vga_address_translator         ; work         ;
+;    |watermelon:orange_ROM2|                                    ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|watermelon:orange_ROM2                                                                                                                                                                                                                         ; watermelon                     ; work         ;
+;       |altsyncram:altsyncram_component|                        ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|watermelon:orange_ROM2|altsyncram:altsyncram_component                                                                                                                                                                                         ; altsyncram                     ; work         ;
+;          |altsyncram_uig1:auto_generated|                      ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |fruit_game|watermelon:orange_ROM2|altsyncram:altsyncram_component|altsyncram_uig1:auto_generated                                                                                                                                                          ; altsyncram_uig1                ; work         ;
 +----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -438,9 +440,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; image_colour:bg_ROM|altsyncram:altsyncram_component|altsyncram_3tg1:auto_generated|ALTSYNCRAM                                                                                                                                                             ; AUTO ; ROM              ; 19200        ; 3            ; --           ; --           ; 57600 ; image_colour.mif ;
 ; music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096  ; None             ;
 ; music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096  ; None             ;
-; orange2:orange_ROM2|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated|ALTSYNCRAM                                                                                                                                                             ; AUTO ; ROM              ; 64           ; 3            ; --           ; --           ; 192   ; orange.mif       ;
 ; orange:orange_ROM1|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated|ALTSYNCRAM                                                                                                                                                              ; AUTO ; ROM              ; 64           ; 3            ; --           ; --           ; 192   ; orange.mif       ;
 ; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pnm1:auto_generated|ALTSYNCRAM                                                                                                                                                                          ; AUTO ; Simple Dual Port ; 19200        ; 3            ; 19200        ; 3            ; 57600 ; None             ;
+; watermelon:orange_ROM2|altsyncram:altsyncram_component|altsyncram_uig1:auto_generated|ALTSYNCRAM                                                                                                                                                          ; AUTO ; ROM              ; 256          ; 3            ; --           ; --           ; 768   ; watermelon.mif   ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------------+
 
 
@@ -456,16 +458,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                             ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                 ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-----------------+
-; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|image_colour:bg_ROM ; image_colour.v  ;
-; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|orange:orange_ROM1  ; orange.v        ;
-; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|orange2:orange_ROM2 ; orange2.v       ;
-; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|bucket:player_ROM   ; bucket.v        ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-----------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                ;
++--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                    ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|image_colour:bg_ROM    ; image_colour.v  ;
+; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|orange:orange_ROM1     ; orange.v        ;
+; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|watermelon:orange_ROM2 ; watermelon.v    ;
+; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |fruit_game|bucket:player_ROM      ; bucket.v        ;
++--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
@@ -681,10 +683,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Total registers                              ; 590   ;
 ; Number of registers using Synchronous Clear  ; 308   ;
-; Number of registers using Synchronous Load   ; 14    ;
-; Number of registers using Asynchronous Clear ; 320   ;
+; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Asynchronous Clear ; 322   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 316   ;
+; Number of registers using Clock Enable       ; 312   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -696,8 +698,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------------------------+---------+
 ; lives[0]                                                  ; 6       ;
 ; lives[1]                                                  ; 5       ;
-; rand_fruit_x:RNG|rnd[1]                                   ; 12      ;
-; rand_fruit_x:RNG|rnd[3]                                   ; 16      ;
 ; X_player[6]                                               ; 13      ;
 ; X_player[3]                                               ; 6       ;
 ; music:bg_music|avconf:avc|I2C_Controller:u0|SCLK          ; 2       ;
@@ -707,9 +707,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; music:bg_music|avconf:avc|I2C_Controller:u0|SD_COUNTER[2] ; 20      ;
 ; music:bg_music|avconf:avc|I2C_Controller:u0|SD_COUNTER[1] ; 18      ;
 ; music:bg_music|avconf:avc|I2C_Controller:u0|SD_COUNTER[0] ; 24      ;
-; time_1[4]                                                 ; 4       ;
 ; time_2[4]                                                 ; 2       ;
+; time_1[4]                                                 ; 4       ;
 ; move_r8[4]                                                ; 2       ;
+; time_2[17]                                                ; 3       ;
+; time_2[19]                                                ; 3       ;
+; time_2[15]                                                ; 3       ;
+; time_2[10]                                                ; 3       ;
+; time_2[6]                                                 ; 3       ;
+; time_2[8]                                                 ; 3       ;
+; time_2[9]                                                 ; 3       ;
 ; time_1[19]                                                ; 4       ;
 ; time_1[18]                                                ; 3       ;
 ; time_1[10]                                                ; 3       ;
@@ -718,17 +725,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; time_1[6]                                                 ; 3       ;
 ; time_1[7]                                                 ; 3       ;
 ; time_1[8]                                                 ; 3       ;
-; time_2[17]                                                ; 3       ;
-; time_2[19]                                                ; 3       ;
-; time_2[15]                                                ; 3       ;
-; time_2[10]                                                ; 3       ;
-; time_2[6]                                                 ; 3       ;
-; time_2[8]                                                 ; 3       ;
-; time_2[9]                                                 ; 3       ;
-; rand_fruit_x:RNG|lfsr[0]                                  ; 2       ;
-; rand_fruit_x:RNG|lfsr[2]                                  ; 2       ;
-; rand_fruit_x:RNG|lfsr[5]                                  ; 3       ;
-; rand_fruit_x:RNG|lfsr[7]                                  ; 2       ;
+; rand_fruit_x:RNG|rnd[3]                                   ; 9       ;
+; rand_fruit_x:RNG|rnd[1]                                   ; 5       ;
 ; move_r8[18]                                               ; 3       ;
 ; move_r8[17]                                               ; 3       ;
 ; move_r8[16]                                               ; 3       ;
@@ -739,6 +737,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; move_r8[9]                                                ; 3       ;
 ; music:bg_music|avconf:avc|I2C_Controller:u0|END           ; 5       ;
 ; music:bg_music|avconf:avc|I2C_Controller:u0|SDO           ; 2       ;
+; rand_fruit_x:RNG|lfsr[0]                                  ; 2       ;
+; rand_fruit_x:RNG|lfsr[2]                                  ; 2       ;
+; rand_fruit_x:RNG|lfsr[5]                                  ; 3       ;
+; rand_fruit_x:RNG|lfsr[7]                                  ; 2       ;
 ; Total number of inverted registers = 45                   ;         ;
 +-----------------------------------------------------------+---------+
 
@@ -748,17 +750,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[2]                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fruit_game|vga_adapter:VGA|vga_controller:controller|yCounter[8]                                                                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[1]                                  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |fruit_game|music:bg_music|square_wave_counter[0]                                                                                       ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[5]                ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[1]                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fruit_game|vga_adapter:VGA|vga_controller:controller|yCounter[5]                                                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[4]                                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |fruit_game|Y_current_2[0]                                                                                                              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |fruit_game|Y_current_2[2]                                                                                                              ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |fruit_game|music:bg_music|square_wave_counter[2]                                                                                       ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[7]                ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[13]                        ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                                 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[1]                                      ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[7]                        ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[23] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |fruit_game|lives[1]                                                                                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[2]                                      ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |fruit_game|KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[13]                       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |fruit_game|Y_current[3]                                                                                                                ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |fruit_game|music:bg_music|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[20] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |fruit_game|lives[0]                                                                                                                    ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |fruit_game|music:bg_music|avconf:avc|I2C_Controller:u0|SD_COUNTER[5]                                                                   ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |fruit_game|Add25                                                                                                                       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fruit_game|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_pnm1:auto_generated|mux_ifb:mux3|result_node[1]                           ;
@@ -789,13 +794,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------+--------------------+------+--------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Source assignments for orange2:orange_ROM2|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                          ;
-+---------------------------------+--------------------+------+---------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                           ;
-+---------------------------------+--------------------+------+---------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Source assignments for watermelon:orange_ROM2|altsyncram:altsyncram_component|altsyncram_uig1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                             ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                              ;
++---------------------------------+--------------------+------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------+
@@ -1002,64 +1007,64 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: orange2:orange_ROM2|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+--------------------------------------+
-; Parameter Name                     ; Value                ; Type                                 ;
-+------------------------------------+----------------------+--------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                              ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                           ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                         ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                         ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                       ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                              ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                              ;
-; WIDTH_A                            ; 3                    ; Signed Integer                       ;
-; WIDTHAD_A                          ; 6                    ; Signed Integer                       ;
-; NUMWORDS_A                         ; 64                   ; Signed Integer                       ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                              ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                              ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                              ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                              ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                              ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                              ;
-; WIDTH_B                            ; 1                    ; Untyped                              ;
-; WIDTHAD_B                          ; 1                    ; Untyped                              ;
-; NUMWORDS_B                         ; 1                    ; Untyped                              ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                              ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                              ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                              ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                              ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                              ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                              ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                              ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                              ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                              ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                              ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                       ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                              ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                              ;
-; BYTE_SIZE                          ; 8                    ; Untyped                              ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                              ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
-; INIT_FILE                          ; orange.mif           ; Untyped                              ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                              ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                              ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                              ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                              ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                              ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                              ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                              ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                              ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                              ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                              ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                              ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                              ;
-; CBXI_PARAMETER                     ; altsyncram_73g1      ; Untyped                              ;
-+------------------------------------+----------------------+--------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: watermelon:orange_ROM2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------+
+; Parameter Name                     ; Value                ; Type                                    ;
++------------------------------------+----------------------+-----------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                 ;
+; WIDTH_A                            ; 3                    ; Signed Integer                          ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                          ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; WIDTH_B                            ; 1                    ; Untyped                                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                 ;
+; INIT_FILE                          ; watermelon.mif       ; Untyped                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_uig1      ; Untyped                                 ;
++------------------------------------+----------------------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2304,68 +2309,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                ;
-+-------------------------------------------+-----------------------------------------------------+
-; Name                                      ; Value                                               ;
-+-------------------------------------------+-----------------------------------------------------+
-; Number of entity instances                ; 5                                                   ;
-; Entity Instance                           ; image_colour:bg_ROM|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                 ;
-;     -- WIDTH_A                            ; 3                                                   ;
-;     -- NUMWORDS_A                         ; 19200                                               ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
-;     -- WIDTH_B                            ; 1                                                   ;
-;     -- NUMWORDS_B                         ; 1                                                   ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
-; Entity Instance                           ; orange:orange_ROM1|altsyncram:altsyncram_component  ;
-;     -- OPERATION_MODE                     ; ROM                                                 ;
-;     -- WIDTH_A                            ; 3                                                   ;
-;     -- NUMWORDS_A                         ; 64                                                  ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
-;     -- WIDTH_B                            ; 1                                                   ;
-;     -- NUMWORDS_B                         ; 1                                                   ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
-; Entity Instance                           ; orange2:orange_ROM2|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                 ;
-;     -- WIDTH_A                            ; 3                                                   ;
-;     -- NUMWORDS_A                         ; 64                                                  ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
-;     -- WIDTH_B                            ; 1                                                   ;
-;     -- NUMWORDS_B                         ; 1                                                   ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
-; Entity Instance                           ; bucket:player_ROM|altsyncram:altsyncram_component   ;
-;     -- OPERATION_MODE                     ; ROM                                                 ;
-;     -- WIDTH_A                            ; 3                                                   ;
-;     -- NUMWORDS_A                         ; 256                                                 ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
-;     -- WIDTH_B                            ; 1                                                   ;
-;     -- NUMWORDS_B                         ; 1                                                   ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
-; Entity Instance                           ; vga_adapter:VGA|altsyncram:VideoMemory              ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                           ;
-;     -- WIDTH_A                            ; 3                                                   ;
-;     -- NUMWORDS_A                         ; 19200                                               ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
-;     -- WIDTH_B                            ; 3                                                   ;
-;     -- NUMWORDS_B                         ; 19200                                               ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
-;     -- OUTDATA_REG_B                      ; CLOCK1                                              ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
-+-------------------------------------------+-----------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                   ;
++-------------------------------------------+--------------------------------------------------------+
+; Name                                      ; Value                                                  ;
++-------------------------------------------+--------------------------------------------------------+
+; Number of entity instances                ; 5                                                      ;
+; Entity Instance                           ; image_colour:bg_ROM|altsyncram:altsyncram_component    ;
+;     -- OPERATION_MODE                     ; ROM                                                    ;
+;     -- WIDTH_A                            ; 3                                                      ;
+;     -- NUMWORDS_A                         ; 19200                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 1                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
+; Entity Instance                           ; orange:orange_ROM1|altsyncram:altsyncram_component     ;
+;     -- OPERATION_MODE                     ; ROM                                                    ;
+;     -- WIDTH_A                            ; 3                                                      ;
+;     -- NUMWORDS_A                         ; 64                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 1                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
+; Entity Instance                           ; watermelon:orange_ROM2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                    ;
+;     -- WIDTH_A                            ; 3                                                      ;
+;     -- NUMWORDS_A                         ; 256                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 1                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
+; Entity Instance                           ; bucket:player_ROM|altsyncram:altsyncram_component      ;
+;     -- OPERATION_MODE                     ; ROM                                                    ;
+;     -- WIDTH_A                            ; 3                                                      ;
+;     -- NUMWORDS_A                         ; 256                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 1                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
+; Entity Instance                           ; vga_adapter:VGA|altsyncram:VideoMemory                 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                              ;
+;     -- WIDTH_A                            ; 3                                                      ;
+;     -- NUMWORDS_A                         ; 19200                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                           ;
+;     -- WIDTH_B                            ; 3                                                      ;
+;     -- NUMWORDS_B                         ; 19200                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
+;     -- OUTDATA_REG_B                      ; CLOCK1                                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
++-------------------------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2540,23 +2545,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex7seg:H0"                                                                                                                   ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; display ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "display[6..1]" have no fanouts ;
+; display ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex7seg:H1"                                                                                                                   ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; display ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "display[6..1]" have no fanouts ;
+; display ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "watermelon:orange_ROM2"                                                                                                                           ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                         ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (6 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "address[7..6]" will be connected to GND. ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 590                         ;
-;     CLR               ; 77                          ;
+;     CLR               ; 81                          ;
 ;     CLR SCLR          ; 112                         ;
-;     ENA               ; 48                          ;
+;     ENA               ; 46                          ;
 ;     ENA CLR           ; 99                          ;
 ;     ENA CLR SCLR      ; 18                          ;
-;     ENA CLR SLD       ; 14                          ;
+;     ENA CLR SLD       ; 12                          ;
 ;     ENA SCLR          ; 137                         ;
 ;     SCLR              ; 41                          ;
 ;     plain             ; 44                          ;
 ; arriav_io_obuf        ; 6                           ;
-; arriav_lcell_comb     ; 1882                        ;
+; arriav_lcell_comb     ; 1874                        ;
 ;     arith             ; 801                         ;
 ;         0 data inputs ; 58                          ;
 ;         1 data inputs ; 442                         ;
@@ -2564,16 +2598,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 25                          ;
 ;         4 data inputs ; 93                          ;
 ;         5 data inputs ; 128                         ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 1054                        ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 1047                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 48                          ;
-;         2 data inputs ; 251                         ;
-;         3 data inputs ; 159                         ;
-;         4 data inputs ; 203                         ;
-;         5 data inputs ; 194                         ;
-;         6 data inputs ; 197                         ;
+;         1 data inputs ; 45                          ;
+;         2 data inputs ; 268                         ;
+;         3 data inputs ; 157                         ;
+;         4 data inputs ; 182                         ;
+;         5 data inputs ; 187                         ;
+;         6 data inputs ; 206                         ;
 ;     shared            ; 24                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 5                           ;
@@ -2581,12 +2615,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 2                           ;
 ;         4 data inputs ; 1                           ;
 ; arriav_mac            ; 1                           ;
-; boundary_port         ; 86                          ;
+; boundary_port         ; 72                          ;
 ; generic_pll           ; 2                           ;
 ; stratixv_ram_block    ; 91                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 69.80                       ;
-; Average LUT depth     ; 22.97                       ;
+; Average LUT depth     ; 23.05                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2605,7 +2639,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 26 03:14:45 2024
+    Info: Processing started: Tue Nov 26 13:54:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fruit_game -c fruit_game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -2651,9 +2685,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file keyboar
     Info (12023): Found entity 1: basketController File: C:/Users/jmjos/Documents/ECE241/fruit_game/keyboard_to_bucket.v Line: 1
 Info (12021): Found 4 design units, including 4 entities, in source file fruit_game.v
     Info (12023): Found entity 1: fruit_game File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 1
-    Info (12023): Found entity 2: regn File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 515
-    Info (12023): Found entity 3: countFruit File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 528
-    Info (12023): Found entity 4: hex7seg File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 540
+    Info (12023): Found entity 2: regn File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 520
+    Info (12023): Found entity 3: countFruit File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 533
+    Info (12023): Found entity 4: hex7seg File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 545
 Info (12021): Found 1 design units, including 1 entities, in source file altera_up_ps2_data_in.v
     Info (12023): Found entity 1: Altera_UP_PS2_Data_In File: C:/Users/jmjos/Documents/ECE241/fruit_game/Altera_UP_PS2_Data_In.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file altera_up_ps2_command_out.v
@@ -2677,8 +2711,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file lives.v
     Info (12023): Found entity 1: displayLives File: C:/Users/jmjos/Documents/ECE241/fruit_game/lives.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file speedcounter.v
     Info (12023): Found entity 1: speedCounter File: C:/Users/jmjos/Documents/ECE241/fruit_game/speedCounter.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at fruit_game.v(393): created implicit net for "collision1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 393
-Warning (10236): Verilog HDL Implicit Net warning at fruit_game.v(403): created implicit net for "collision2" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 403
+Info (12021): Found 1 design units, including 1 entities, in source file watermelon.v
+    Info (12023): Found entity 1: watermelon File: C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at fruit_game.v(111): created implicit net for "HEX3" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at fruit_game.v(112): created implicit net for "HEX2" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at fruit_game.v(398): created implicit net for "collision1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 398
+Warning (10236): Verilog HDL Implicit Net warning at fruit_game.v(408): created implicit net for "collision2" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 408
 Info (12127): Elaborating entity "fruit_game" for the top level hierarchy
 Warning (10240): Verilog HDL Always Construct warning at fruit_game.v(307): inferring latch(es) for variable "Y_player", which holds its previous value in one or more paths through the always construct File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 307
 Warning (10034): Output port "LEDR[9..2]" at fruit_game.v(5) has no driver File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 5
@@ -2738,7 +2776,39 @@ Info (12133): Instantiated megafunction "orange:orange_ROM1|altsyncram:altsyncra
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_73g1.tdf
     Info (12023): Found entity 1: altsyncram_73g1 File: C:/Users/jmjos/Documents/ECE241/fruit_game/db/altsyncram_73g1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_73g1" for hierarchy "orange:orange_ROM1|altsyncram:altsyncram_component|altsyncram_73g1:auto_generated" File: c:/intelfpga_lite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "orange2" for hierarchy "orange2:orange_ROM2" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 89
+Info (12128): Elaborating entity "watermelon" for hierarchy "watermelon:orange_ROM2" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 89
+Info (12128): Elaborating entity "altsyncram" for hierarchy "watermelon:orange_ROM2|altsyncram:altsyncram_component" File: C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.v Line: 82
+Info (12130): Elaborated megafunction instantiation "watermelon:orange_ROM2|altsyncram:altsyncram_component" File: C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.v Line: 82
+Info (12133): Instantiated megafunction "watermelon:orange_ROM2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "watermelon.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "3"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uig1.tdf
+    Info (12023): Found entity 1: altsyncram_uig1 File: C:/Users/jmjos/Documents/ECE241/fruit_game/db/altsyncram_uig1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_uig1" for hierarchy "watermelon:orange_ROM2|altsyncram:altsyncram_component|altsyncram_uig1:auto_generated" File: c:/intelfpga_lite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (113031): 64 out of 64 addresses are reinitialized. The latest initialized data will replace the existing data. There are 64 warnings found, and 10 warnings are reported. File: C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.mif Line: 1
+    Warning (113030): Memory Initialization File address 56 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 57 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 58 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 59 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 60 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 61 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 62 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 63 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 8
+    Warning (113030): Memory Initialization File address 48 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 9
+    Warning (113030): Memory Initialization File address 49 is reinitialized File: C:/Users/jmjos/Documents/ECE241/fruit_game/ Line: 9
+Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (64) in the Memory Initialization File "C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/jmjos/Documents/ECE241/fruit_game/watermelon.v Line: 82
 Info (12128): Elaborating entity "bucket" for hierarchy "bucket:player_ROM" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 100
 Info (12128): Elaborating entity "altsyncram" for hierarchy "bucket:player_ROM|altsyncram:altsyncram_component" File: C:/Users/jmjos/Documents/ECE241/fruit_game/bucket.v Line: 82
 Info (12130): Elaborated megafunction instantiation "bucket:player_ROM|altsyncram:altsyncram_component" File: C:/Users/jmjos/Documents/ECE241/fruit_game/bucket.v Line: 82
@@ -2763,7 +2833,7 @@ Info (12128): Elaborating entity "altsyncram_u4g1" for hierarchy "bucket:player_
 Info (12128): Elaborating entity "rand_fruit_x" for hierarchy "rand_fruit_x:RNG" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 108
 Warning (10230): Verilog HDL assignment warning at rand_fruit_x.v(19): truncated value with size 32 to match size of target (8) File: C:/Users/jmjos/Documents/ECE241/fruit_game/rand_fruit_x.v Line: 19
 Info (12128): Elaborating entity "hex7seg" for hierarchy "hex7seg:H1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 111
-Info (12128): Elaborating entity "KeyboardModule" for hierarchy "KeyboardModule:move" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 381
+Info (12128): Elaborating entity "KeyboardModule" for hierarchy "KeyboardModule:move" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 386
 Warning (10240): Verilog HDL Always Construct warning at keyboard.v(225): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: C:/Users/jmjos/Documents/ECE241/fruit_game/keyboard.v Line: 225
 Info (10041): Inferred latch for "next_state.MOVE_LEFT" at keyboard.v(225) File: C:/Users/jmjos/Documents/ECE241/fruit_game/keyboard.v Line: 225
 Info (10041): Inferred latch for "next_state.MOVE_RIGHT" at keyboard.v(225) File: C:/Users/jmjos/Documents/ECE241/fruit_game/keyboard.v Line: 225
@@ -2773,15 +2843,15 @@ Info (12128): Elaborating entity "PS2_Controller" for hierarchy "KeyboardModule:
 Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/jmjos/Documents/ECE241/fruit_game/PS2_Controller.v Line: 246
 Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/jmjos/Documents/ECE241/fruit_game/PS2_Controller.v Line: 266
 Info (12128): Elaborating entity "SpeedUpCounter" for hierarchy "KeyboardModule:move|SpeedUpCounter:speedUpCounter" File: C:/Users/jmjos/Documents/ECE241/fruit_game/keyboard.v Line: 306
-Info (12128): Elaborating entity "collisionDetect" for hierarchy "collisionDetect:collision_unit1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 396
-Info (12128): Elaborating entity "pointsystem" for hierarchy "pointsystem:point_unit" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 435
-Info (12128): Elaborating entity "scoreDisplayWithHex" for hierarchy "scoreDisplayWithHex:display_unit" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 445
+Info (12128): Elaborating entity "collisionDetect" for hierarchy "collisionDetect:collision_unit1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 401
+Info (12128): Elaborating entity "pointsystem" for hierarchy "pointsystem:point_unit" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 440
+Info (12128): Elaborating entity "scoreDisplayWithHex" for hierarchy "scoreDisplayWithHex:display_unit" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 450
 Warning (10230): Verilog HDL assignment warning at collision.v(126): truncated value with size 32 to match size of target (4) File: C:/Users/jmjos/Documents/ECE241/fruit_game/collision.v Line: 126
 Warning (10230): Verilog HDL assignment warning at collision.v(124): truncated value with size 32 to match size of target (4) File: C:/Users/jmjos/Documents/ECE241/fruit_game/collision.v Line: 124
 Warning (10240): Verilog HDL Always Construct warning at collision.v(114): inferring latch(es) for variable "shift_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/jmjos/Documents/ECE241/fruit_game/collision.v Line: 114
 Warning (10240): Verilog HDL Always Construct warning at collision.v(114): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/jmjos/Documents/ECE241/fruit_game/collision.v Line: 114
-Info (12128): Elaborating entity "displayLives" for hierarchy "displayLives:lives_display_module" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 459
-Info (12128): Elaborating entity "music" for hierarchy "music:bg_music" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 475
+Info (12128): Elaborating entity "displayLives" for hierarchy "displayLives:lives_display_module" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 464
+Info (12128): Elaborating entity "music" for hierarchy "music:bg_music" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 480
 Warning (10230): Verilog HDL assignment warning at music.v(52): truncated value with size 32 to match size of target (16) File: C:/Users/jmjos/Documents/ECE241/fruit_game/music.v Line: 52
 Warning (10230): Verilog HDL assignment warning at music.v(53): truncated value with size 32 to match size of target (16) File: C:/Users/jmjos/Documents/ECE241/fruit_game/music.v Line: 53
 Warning (10230): Verilog HDL assignment warning at music.v(54): truncated value with size 32 to match size of target (16) File: C:/Users/jmjos/Documents/ECE241/fruit_game/music.v Line: 54
@@ -2915,7 +2985,7 @@ Info (12128): Elaborating entity "I2C_Controller" for hierarchy "music:bg_music|
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(79): truncated value with size 32 to match size of target (1) File: C:/Users/jmjos/Documents/ECE241/fruit_game/avconf/I2C_Controller.v Line: 79
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(78): truncated value with size 32 to match size of target (1) File: C:/Users/jmjos/Documents/ECE241/fruit_game/avconf/I2C_Controller.v Line: 78
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(91): truncated value with size 32 to match size of target (6) File: C:/Users/jmjos/Documents/ECE241/fruit_game/avconf/I2C_Controller.v Line: 91
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 507
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 512
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/jmjos/Documents/ECE241/fruit_game/vga_adapter/vga_adapter.v Line: 178
 Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/jmjos/Documents/ECE241/fruit_game/vga_adapter/vga_adapter.v Line: 178
 Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: C:/Users/jmjos/Documents/ECE241/fruit_game/vga_adapter/vga_adapter.v Line: 178
@@ -3042,24 +3112,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_fnh File: C:/Users/jmjos/Documents/ECE241/fruit_game/db/sign_div_unsign_fnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_43f.tdf
     Info (12023): Found entity 1: alt_u_div_43f File: C:/Users/jmjos/Documents/ECE241/fruit_game/db/alt_u_div_43f.tdf Line: 23
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "X_current[7]" is converted into an equivalent circuit using register "X_current[7]~_emulated" and latch "X_current[7]~1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current[6]" is converted into an equivalent circuit using register "X_current[6]~_emulated" and latch "X_current[6]~5" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current[5]" is converted into an equivalent circuit using register "X_current[5]~_emulated" and latch "X_current[5]~9" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current[4]" is converted into an equivalent circuit using register "X_current[4]~_emulated" and latch "X_current[4]~13" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current[3]" is converted into an equivalent circuit using register "X_current[3]~_emulated" and latch "X_current[3]~17" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current[2]" is converted into an equivalent circuit using register "X_current[2]~_emulated" and latch "X_current[2]~21" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current[1]" is converted into an equivalent circuit using register "X_current[1]~_emulated" and latch "X_current[1]~25" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current[0]" is converted into an equivalent circuit using register "X_current[0]~_emulated" and latch "X_current[0]~29" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[7]" is converted into an equivalent circuit using register "X_current_2[7]~_emulated" and latch "X_current_2[7]~1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[6]" is converted into an equivalent circuit using register "X_current_2[6]~_emulated" and latch "X_current_2[6]~5" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[5]" is converted into an equivalent circuit using register "X_current_2[5]~_emulated" and latch "X_current_2[5]~9" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[4]" is converted into an equivalent circuit using register "X_current_2[4]~_emulated" and latch "X_current_2[4]~13" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[3]" is converted into an equivalent circuit using register "X_current_2[3]~_emulated" and latch "X_current_2[3]~17" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[2]" is converted into an equivalent circuit using register "X_current_2[2]~_emulated" and latch "X_current_2[2]~21" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[1]" is converted into an equivalent circuit using register "X_current_2[1]~_emulated" and latch "X_current_2[1]~25" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
-    Warning (13310): Register "X_current_2[0]" is converted into an equivalent circuit using register "X_current_2[0]~_emulated" and latch "X_current_2[0]~29" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 322
+    Warning (13310): Register "X_current[7]" is converted into an equivalent circuit using register "X_current[7]~_emulated" and latch "X_current[7]~1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current[6]" is converted into an equivalent circuit using register "X_current[6]~_emulated" and latch "X_current[6]~5" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current[5]" is converted into an equivalent circuit using register "X_current[5]~_emulated" and latch "X_current[5]~9" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current[4]" is converted into an equivalent circuit using register "X_current[4]~_emulated" and latch "X_current[4]~13" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current[3]" is converted into an equivalent circuit using register "X_current[3]~_emulated" and latch "X_current[3]~17" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current[2]" is converted into an equivalent circuit using register "X_current[2]~_emulated" and latch "X_current[2]~21" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current[1]" is converted into an equivalent circuit using register "X_current[1]~_emulated" and latch "X_current[1]~25" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current[0]" is converted into an equivalent circuit using register "X_current[0]~_emulated" and latch "X_current[0]~29" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[7]" is converted into an equivalent circuit using register "X_current_2[7]~_emulated" and latch "X_current_2[7]~1" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[6]" is converted into an equivalent circuit using register "X_current_2[6]~_emulated" and latch "X_current_2[6]~5" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[5]" is converted into an equivalent circuit using register "X_current_2[5]~_emulated" and latch "X_current_2[5]~9" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[4]" is converted into an equivalent circuit using register "X_current_2[4]~_emulated" and latch "X_current_2[4]~13" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[3]" is converted into an equivalent circuit using register "X_current_2[3]~_emulated" and latch "X_current_2[3]~17" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[2]" is converted into an equivalent circuit using register "X_current_2[2]~_emulated" and latch "X_current_2[2]~21" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[1]" is converted into an equivalent circuit using register "X_current_2[1]~_emulated" and latch "X_current_2[1]~25" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
+    Warning (13310): Register "X_current_2[0]" is converted into an equivalent circuit using register "X_current_2[0]~_emulated" and latch "X_current_2[0]~29" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 323
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 4
     Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 5
@@ -3073,6 +3143,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 136 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "watermelon:orange_ROM2|altsyncram:altsyncram_component|altsyncram_uig1:auto_generated|ALTSYNCRAM" File: C:/Users/jmjos/Documents/ECE241/fruit_game/db/altsyncram_uig1.tdf Line: 32
 Info (144001): Generated suppressed messages file C:/Users/jmjos/Documents/ECE241/fruit_game/output_files/fruit_game.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 8 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
@@ -3082,18 +3153,18 @@ Warning: RST port on the PLL is not properly connected on instance music:bg_musi
     Info: Must be connected
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: C:/Users/jmjos/Documents/ECE241/fruit_game/fruit_game.v Line: 24
-Info (21057): Implemented 2118 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2103 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 77 output pins
+    Info (21059): Implemented 63 output pins
     Info (21060): Implemented 6 bidirectional pins
-    Info (21061): Implemented 1938 logic cells
+    Info (21061): Implemented 1937 logic cells
     Info (21064): Implemented 91 RAM segments
     Info (21065): Implemented 2 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 142 warnings
-    Info: Peak virtual memory: 4945 megabytes
-    Info: Processing ended: Tue Nov 26 03:15:12 2024
-    Info: Elapsed time: 00:00:27
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 156 warnings
+    Info: Peak virtual memory: 4948 megabytes
+    Info: Processing ended: Tue Nov 26 13:54:34 2024
+    Info: Elapsed time: 00:00:28
     Info: Total CPU time (on all processors): 00:00:20
 
 

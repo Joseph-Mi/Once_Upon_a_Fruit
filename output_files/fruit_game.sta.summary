@@ -3,107 +3,107 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -35.042
-TNS   : -2435.490
+Slack : -35.953
+TNS   : -2605.810
 
 Type  : Slow 1100mV 85C Model Setup 'fall_timer_1[0]'
-Slack : -8.987
-TNS   : -96.072
+Slack : -8.379
+TNS   : -90.924
 
 Type  : Slow 1100mV 85C Model Setup 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -8.804
-TNS   : -31.648
+Slack : -8.279
+TNS   : -30.309
 
 Type  : Slow 1100mV 85C Model Setup 'KEY[0]'
-Slack : -5.456
-TNS   : -74.937
+Slack : -5.741
+TNS   : -77.529
 
 Type  : Slow 1100mV 85C Model Setup 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : -3.383
-TNS   : -184.786
+Slack : -3.857
+TNS   : -192.873
 
 Type  : Slow 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.672
+Slack : 32.472
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -4.054
-TNS   : -12.098
-
-Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.328
-TNS   : 0.000
+Slack : -4.318
+TNS   : -8.329
 
 Type  : Slow 1100mV 85C Model Hold 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.379
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.439
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'fall_timer_1[0]'
-Slack : 0.891
+Slack : 0.853
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'KEY[0]'
-Slack : 1.161
+Slack : 1.322
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 4.687
+Slack : 4.644
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : -7.040
-TNS   : -245.410
+Slack : -7.057
+TNS   : -214.894
 
 Type  : Slow 1100mV 85C Model Recovery 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -6.130
-TNS   : -177.647
+Slack : -6.129
+TNS   : -159.286
 
 Type  : Slow 1100mV 85C Model Recovery 'fall_timer_1[0]'
-Slack : -5.147
-TNS   : -56.159
+Slack : -4.447
+TNS   : -46.126
 
 Type  : Slow 1100mV 85C Model Recovery 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -4.170
-TNS   : -14.102
+Slack : -3.779
+TNS   : -13.481
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -3.769
-TNS   : -1072.026
+Slack : -3.731
+TNS   : -1135.444
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.337
+Slack : 0.373
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'fall_timer_1[0]'
-Slack : 1.510
+Slack : 0.407
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 1.516
+Slack : 1.503
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 1.937
+Slack : 2.227
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 3.980
+Slack : 3.733
 TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fall_timer_1[0]'
+Slack : -0.701
+TNS   : -11.035
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -39.043
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fall_timer_1[0]'
-Slack : -0.394
-TNS   : -6.548
+TNS   : -35.610
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.006
-TNS   : -0.009
+Slack : -0.066
+TNS   : -0.198
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.445
+Slack : 0.465
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -111,115 +111,115 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.827
+Slack : 8.828
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.777
+Slack : 18.779
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -35.830
-TNS   : -2329.504
+Slack : -36.743
+TNS   : -2507.299
 
 Type  : Slow 1100mV 0C Model Setup 'fall_timer_1[0]'
-Slack : -8.961
-TNS   : -96.109
+Slack : -8.574
+TNS   : -92.504
 
 Type  : Slow 1100mV 0C Model Setup 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -8.851
-TNS   : -31.847
+Slack : -8.368
+TNS   : -30.817
 
 Type  : Slow 1100mV 0C Model Setup 'KEY[0]'
-Slack : -5.640
-TNS   : -76.796
+Slack : -5.851
+TNS   : -79.749
 
 Type  : Slow 1100mV 0C Model Setup 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : -3.299
-TNS   : -180.774
+Slack : -3.749
+TNS   : -188.325
 
 Type  : Slow 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 34.916
+Slack : 32.816
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -4.111
-TNS   : -12.371
-
-Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.314
-TNS   : 0.000
+Slack : -4.392
+TNS   : -8.829
 
 Type  : Slow 1100mV 0C Model Hold 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.388
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.420
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'fall_timer_1[0]'
-Slack : 0.862
+Slack : 0.870
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'KEY[0]'
-Slack : 1.232
+Slack : 1.413
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 4.738
+Slack : 4.694
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : -6.981
-TNS   : -243.363
+Slack : -6.994
+TNS   : -213.220
 
 Type  : Slow 1100mV 0C Model Recovery 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -5.960
-TNS   : -172.737
+Slack : -5.956
+TNS   : -154.773
 
 Type  : Slow 1100mV 0C Model Recovery 'fall_timer_1[0]'
-Slack : -5.047
-TNS   : -55.156
+Slack : -4.466
+TNS   : -46.425
 
 Type  : Slow 1100mV 0C Model Recovery 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -4.174
-TNS   : -14.082
+Slack : -3.798
+TNS   : -13.512
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -3.540
-TNS   : -1008.927
+Slack : -3.508
+TNS   : -1067.753
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.262
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Removal 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 1.527
+Slack : 0.292
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'fall_timer_1[0]'
-Slack : 1.576
+Slack : 0.557
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 1.517
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 1.881
+Slack : 2.133
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 4.043
+Slack : 3.818
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fall_timer_1[0]'
+Slack : -0.657
+TNS   : -10.537
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
 Slack : -0.394
-TNS   : -38.423
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fall_timer_1[0]'
-Slack : -0.394
-TNS   : -6.290
+TNS   : -34.815
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.001
-TNS   : -0.001
+Slack : -0.037
+TNS   : -0.069
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.413
+Slack : 0.438
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -227,115 +227,115 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.787
+Slack : 8.788
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.759
+Slack : 18.756
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -10.751
-TNS   : -1356.370
+Slack : -11.054
+TNS   : -1443.071
 
 Type  : Fast 1100mV 85C Model Setup 'fall_timer_1[0]'
-Slack : -4.910
-TNS   : -52.679
+Slack : -4.462
+TNS   : -48.077
 
 Type  : Fast 1100mV 85C Model Setup 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -4.775
-TNS   : -16.899
+Slack : -4.441
+TNS   : -15.945
 
 Type  : Fast 1100mV 85C Model Setup 'KEY[0]'
-Slack : -2.802
-TNS   : -37.764
+Slack : -2.899
+TNS   : -37.800
 
 Type  : Fast 1100mV 85C Model Setup 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : -2.157
-TNS   : -105.690
+Slack : -2.380
+TNS   : -109.811
 
 Type  : Fast 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.153
+Slack : 34.493
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -2.142
-TNS   : -6.392
+Slack : -2.263
+TNS   : -4.395
 
 Type  : Fast 1100mV 85C Model Hold 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.139
+Slack : 0.138
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.195
+Slack : 0.247
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'fall_timer_1[0]'
-Slack : 0.455
+Slack : 0.330
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'KEY[0]'
-Slack : 0.681
+Slack : 0.768
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 2.767
+Slack : 2.815
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : -4.210
-TNS   : -146.671
+Slack : -4.213
+TNS   : -128.164
 
 Type  : Fast 1100mV 85C Model Recovery 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -3.613
-TNS   : -104.701
-
-Type  : Fast 1100mV 85C Model Recovery 'fall_timer_1[0]'
-Slack : -3.212
-TNS   : -35.085
+Slack : -3.614
+TNS   : -93.913
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.525
-TNS   : -646.920
+Slack : -2.815
+TNS   : -685.154
+
+Type  : Fast 1100mV 85C Model Recovery 'fall_timer_1[0]'
+Slack : -2.716
+TNS   : -28.080
 
 Type  : Fast 1100mV 85C Model Recovery 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -2.185
-TNS   : -6.894
+Slack : -1.846
+TNS   : -6.485
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.094
+Slack : 0.116
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'fall_timer_1[0]'
-Slack : 0.919
+Slack : 0.169
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.932
+Slack : 0.926
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 1.317
+Slack : 1.532
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 2.133
+Slack : 1.986
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.194
-TNS   : -4.956
-
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fall_timer_1[0]'
-Slack : -0.047
-TNS   : -0.047
+Slack : -0.455
+TNS   : -4.364
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.228
+TNS   : -3.559
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.047
+Slack : 0.083
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.432
+Slack : 0.487
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -343,7 +343,7 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.814
+Slack : 8.820
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
@@ -351,107 +351,107 @@ Slack : 18.891
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -8.709
-TNS   : -1145.263
+Slack : -9.105
+TNS   : -1214.598
 
 Type  : Fast 1100mV 0C Model Setup 'fall_timer_1[0]'
-Slack : -4.569
-TNS   : -49.142
+Slack : -4.265
+TNS   : -45.495
 
 Type  : Fast 1100mV 0C Model Setup 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -4.528
-TNS   : -16.141
+Slack : -4.239
+TNS   : -15.351
 
 Type  : Fast 1100mV 0C Model Setup 'KEY[0]'
-Slack : -2.625
-TNS   : -35.661
+Slack : -2.730
+TNS   : -35.761
 
 Type  : Fast 1100mV 0C Model Setup 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : -2.088
-TNS   : -99.115
+Slack : -2.282
+TNS   : -102.967
 
 Type  : Fast 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 36.645
+Slack : 35.213
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -2.109
-TNS   : -6.295
+Slack : -2.231
+TNS   : -4.330
 
 Type  : Fast 1100mV 0C Model Hold 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.126
+Slack : 0.125
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.177
+Slack : 0.223
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'fall_timer_1[0]'
-Slack : 0.408
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'KEY[0]'
-Slack : 0.686
+Slack : 0.752
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 2.727
+Slack : 2.758
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
 Slack : -4.144
-TNS   : -144.452
+TNS   : -126.316
 
 Type  : Fast 1100mV 0C Model Recovery 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : -3.509
-TNS   : -101.689
+Slack : -3.510
+TNS   : -91.211
 
 Type  : Fast 1100mV 0C Model Recovery 'fall_timer_1[0]'
-Slack : -3.194
-TNS   : -34.934
+Slack : -2.781
+TNS   : -28.934
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -2.256
-TNS   : -621.327
+Slack : -2.489
+TNS   : -658.520
 
 Type  : Fast 1100mV 0C Model Recovery 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : -2.033
-TNS   : -6.556
+Slack : -1.773
+TNS   : -6.241
 
 Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.039
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.887
+Slack : 0.057
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'fall_timer_1[0]'
-Slack : 0.977
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.878
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 1.329
+Slack : 1.504
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 2.107
+Slack : 1.976
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
-Slack : -0.176
-TNS   : -4.741
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fall_timer_1[0]'
-Slack : 0.003
-TNS   : 0.000
+Slack : -0.335
+TNS   : -2.954
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -0.192
+TNS   : -3.205
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'music:bg_music|avconf:avc|mI2C_CTRL_CLK'
-Slack : 0.073
+Slack : 0.102
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KeyboardModule:move|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
-Slack : 0.450
+Slack : 0.485
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
@@ -459,11 +459,11 @@ Slack : 1.666
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : 8.810
+Slack : 8.812
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
-Slack : 18.888
+Slack : 18.889
 TNS   : 0.000
 
 ------------------------------------------------------------

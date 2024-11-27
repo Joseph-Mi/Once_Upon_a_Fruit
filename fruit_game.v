@@ -86,7 +86,7 @@ module fruit_game(
 
     // Instantiate fruit ROMs
     orange orange_ROM1 ({YC, XC}, CLOCK_50, fruit_color);
-    orange2 orange_ROM2 ({YC_2, XC_2}, CLOCK_50, fruit_color_2);
+    watermelon orange_ROM2 ({YC_2, XC_2}, CLOCK_50, fruit_color_2);
 //    orange3 orange_ROM3 ({YC_3, XC_3}, CLOCK_50, fruit_color_3);
 
 //    wire [8:0] player;
@@ -317,6 +317,7 @@ module fruit_game(
 //			  X_current_3 <= ((X_rnd) > 8'd10) ? (X_rnd + 8'd1) : (X_rnd + 8'd12); // Offset for fruit 3
 			  Y_player <= 7'd80;
 			  X_player <= 8'd72;
+			  lives <= 2'b11;
 		 end else begin
 			  // Update fruit positions during their respective update states
 			  if (current_state == UPDATE_POSITION_1 && fall_sync_1) begin
@@ -325,7 +326,9 @@ module fruit_game(
 						 
 						 Y_current <= 7'b1; // Reset Y position
 						 X_current <= (X_rnd > 8'd10) ? X_rnd : (X_rnd + 8'd10); // Re-randomize X position for fruit 1
-					end else begin
+					end 
+					else if (lives <= 1'b0) Y_current <= Y_current;
+					else begin
 						 Y_current <= Y_current + 1'b1; // Increment Y position
 					end
 			  end
@@ -335,7 +338,9 @@ module fruit_game(
 						 if (Y_current_2 >= Y_RES) lives <= lives - 1'b1;
 						 Y_current_2 <= 7'd3; // Reset Y position
 						 X_current_2 <= ((X_rnd + 8'd10) > 8'd10) ? (X_rnd + 8'd10) : (X_rnd + 8'd12); // Re-randomize X position for fruit 2
-					end else begin
+					end 
+					else if (lives <= 1'b0) Y_current <= Y_current;
+					else begin
 						 Y_current_2 <= Y_current_2 + 1'b1; // Increment Y position
 					end
 			  end
